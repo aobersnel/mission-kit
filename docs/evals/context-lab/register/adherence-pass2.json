@@ -12,6 +12,12 @@
       "hash": "93d9a59ca0514eac4cd412cd5178b0338d07c54ac0c203cb6cba98d3c7459296",
       "recordedAt": "2026-10-18T11:07:04.763Z",
       "declaredStatus": "exploration"
+    },
+    {
+      "experiment": "adherence-pass2",
+      "hash": "2186ca4ea0b92dca7520604ca62db35a59740c4b0a4d38db5787c3cead412e5a",
+      "recordedAt": "2026-10-19T21:21:54.628Z",
+      "declaredStatus": "exploration"
     }
   ]
 }

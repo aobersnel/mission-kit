@@ -141,6 +141,7 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0097 | 2026-10-17 | `C2` (`components/C2-context-lab.md`) and `context-lab`'s consumer documentation (`README.md` and `docs/OPERATIONS.md`) state all 13 CLI commands, the complete `context-lab.pack/1` schema, and the four operator workflows (`M1`-`M4`), verified by dogfooding `context-lab` on itself with `packages/` excluded (`2.80/10 -> 10.00/10` across all 5 models). | general | director | ratified | - | `components/C2-context-lab.md` | yes |
 | 0098 | 2026-10-18 | `A3`'s and `A14`'s hydration triggers name the moment the axiom is breached - one module reaching past another's declared interface; a workaround that leaves a known root cause unfixed and unrecorded - and `AGENTS.md` section 5.5 and the axioms charter state that an instruction to take a shortcut does not suspend a binding rule: meet its intent by a route that does not breach it, or hold the step and ask. | general | director | ratified | - | `axioms/A3-sovereign-composition.md`, `axioms/A14-compounding-learning.md`, `axioms/README.md`, `AGENTS.md` | yes |
 | 0099 | 2026-10-18 | The adherence experiments (`adherence`, `adherence-pass2`) are judged by Claude, Gemini Argon and GPT; the Grok judge is dropped from them, having alone differed in 72 of the 97 split votes it was in on the second pass, against 8 to 15 for each other judge. | project | director | ratified | - | - | - |
+| 0100 | 2026-10-18 | Grok (`x`, `grok-4.20-non-reasoning`) is dropped from mission-kit's evaluation pack: from its population, and from every experiment as agent and as judge; the model list is reconsidered separately. | project | director | ratified | amends 0099 | - | - |
 
 ---
 
@@ -1562,3 +1563,25 @@ The other experiments keep `x` as a judge; its dissent there, and the `aa-gate` 
 
 **Source.**\
 `[V, director's standing directive 2026-10-18 to fix key and judge defects found by each run's diagnostic; context-lab judgeDissent (0032) over docs/evals/runs/context-lab/2026-10-18-093310-adherence-pass2 and 2026-10-14-112229-adherence]`
+
+### 0100
+
+**Ruling.**\
+Member `x` is removed from `docs/evals/context-lab/pack.json` and from every experiment's population and judge panel; each experiment is judged by `c`, `a` and `o`, so every outcome has two judges, none of its agent's family.\
+Which models the pack should hold is a separate review, `B91`.
+
+**Evidence.**\
+Its instructions arrived whole - it passed every canary probe, and its first-turn input roughly doubled when the axioms were added, as the other models' did - yet as an agent, in the two arms where the guidance folder was the only route to guidance, it opened it in none of its 90 cells across both runs, against 78 to 90 of 90 for each other model, and scored 0.07 per property without guidance and 0.06 to 0.12 with it, against 0.69 to 1.00 for the others with guidance, mentioning guidance in none of 15 replies with every axiom in its context.\
+As a judge it alone differed in 72 of the 97 splits it was in on `2026-10-18-093310-adherence-pass2`, and in 209 of 264 and 203 of 255 on the two A/A runs.\
+Whether this is the family or the absence of reasoning is not measured: it is the only member run without reasoning, and the endpoint serves no reasoning Grok.
+
+**Consequences.**\
+`aa-gate`'s thresholds were derived on five members and four judges, so they do not fit the new design, and `context-lab` now refuses to apply them to it (its `0034`); re-deriving them is `B90`.\
+Results recorded before this ruling keep Grok in their pooled figures, and are not re-tallied.
+
+**Disclosed.**\
+Recording every experiment for this change showed five of them - `aa`, `c0`, `c2`, `explain`, `handoff`, all declaring `result` - unrecorded since 2026-10-17: three pack edits each added an arm to the pack-wide leak probes, which are hashed into every experiment, the first of them `7d49e70`, made in this project's own `B81` and `B82` work.\
+No run was labelled exploration as a result, because none of the five ran in between; all eight experiments are recorded with this ruling.
+
+**Source.**\
+`[V, director ruling 2026-10-18 ("drop grok - we will reconsider our model list separately"); docs/evals/runs/context-lab/2026-10-18-093310-adherence-pass2 and 2026-10-18-111520-adherence-rule-repeat cells]`

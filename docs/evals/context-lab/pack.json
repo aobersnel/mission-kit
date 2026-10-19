@@ -346,15 +346,6 @@
       }
     },
     {
-      "id": "x",
-      "family": "grok",
-      "runtime": "opencode",
-      "model": "litellm-nexus/grok-4.20-non-reasoning",
-      "settings": {
-        "outputTokenMax": 1048576
-      }
-    },
-    {
       "id": "o",
       "family": "gpt",
       "runtime": "codex",
