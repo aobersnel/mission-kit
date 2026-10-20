@@ -20,6 +20,7 @@
 //   R4  no closed row is planned in an open milestone the record and the plan disagreeing
 //   R5  milestones appear in ascending order          an accidental priority nobody chose
 //   R6  a DONE milestone cites no open row            a milestone claiming more than it delivered
+//   R8  "Where we are" agrees with the milestones     a narrative still pointing at finished work
 //
 // It reads both files as written rather than a separate declaration, because the files ARE the
 // declaration; a second copy of the board's structure would be the drift this exists to prevent.
@@ -174,6 +175,24 @@ for (const item of items) {
 			if (!elsewhere) fail("R6", `${item.id} sits in DONE ${item.milestone.id} but ${b} is still open and planned nowhere else`);
 		}
 	}
+}
+
+// --- R8: the narrative agrees with the milestones ---------------------------------------------
+//
+// "Where we are" is written by hand, so it can say one thing while the milestones say another; on
+// 2026-10-20 it still marked M4 as current four days after M4 was done. In its text block, a
+// milestone marked "<- HERE" must not be DONE, and a status written beside a milestone must be the
+// status its heading carries. A board without the section is not checked.
+
+const where = board.match(/^## Where we are\b[\s\S]*?(?=^## |(?![\s\S]))/m)?.[0] ?? "";
+for (const line of where.split("\n")) {
+	const m = line.match(/^\s*(?:next:\s*)?(M\d+)\b/);
+	if (!m) continue;
+	const ms = milestones.find((x) => x.id === m[1]);
+	if (!ms) { fail("R8", `"Where we are" names ${m[1]}, which has no milestone heading`); continue; }
+	if (/<-\s*HERE/.test(line) && ms.status === "DONE") fail("R8", `"Where we are" marks ${m[1]} as current, but ${m[1]} is DONE`);
+	const st = line.match(/\b(TODO|WIP|BLOCKED|DONE|DROPPED)\b/);
+	if (st && st[1] !== ms.status) fail("R8", `"Where we are" gives ${m[1]} as ${st[1]}, but its heading says ${ms.status}`);
 }
 
 // --- R7: the ledger and the held list are generated from the record ---------------------------
