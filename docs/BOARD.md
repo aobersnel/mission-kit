@@ -44,7 +44,7 @@ M6  make every trap able to show its guidance    WIP  <- HERE
 Since M4 closed: every axiom has an adherence trap (`B73`); the second adherence pass rewrote `A3`'s and `A14`'s hydration triggers and added the rule that a shortcut instruction does not suspend a binding rule (`0098`), confirmed by a pre-registered repeat (`B89`); Grok left the evaluation pack (`0100`), and `aa-gate`'s thresholds were re-derived for the four-model design (`B90`).\
 Testing a rewrite of `A4`'s trigger (`0103`) showed that `A4`'s trap cannot show whether `A4` works, the only trap of fifteen its guidance does not move; M6 builds one that can, and makes that a check every trap must pass.\
 The new trap, `adherence-a4-record`, now measures `A4`: inconclusive at 12 cells per arm (`0104`), its pre-registered repeat separated, 13 of 24 cells with guidance against 1 of 24 without (`0105`), the effect lying in Gemini Argon and GPT.\
-M6.2's change to `M2` is drafted on a local branch and its test pre-registered (`0106`).
+M6.2's change to `M2` is held on a local branch: a fresh audit refuted its first wording before any reader ran (`0106`), and the revised wording's test is pre-registered (`0107`).
 
 **To return to:** the communication-moves matrix (`B42`), when the director has a session; `B70`, which waits on bug 249's details.\
 The model list is settled: the pack keeps its four models (`0101`).
@@ -89,6 +89,7 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | `B70` | S3 | A8 signal | held | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. |
 | `B76` | S3 | A12 signal | held | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. |
 | `B94` | S3 | A8 signal | M6.2 | A trap judges a change before anyone checks it can show an effect. |
+| `B97` | S3 | A11 signal | held | Whether a probe separates readers holding the document from readers holding none is computed by hand. |
 | `B12` | S4 | A14 signal | held | The recovery methodology for a brownfield vision is unwritten and its reasoning is untested. |
 | `B19` | S4 | A14 signal | held | Methodology has nothing proportionate for a small design decision. |
 | `B22` | S4 | A9 signal | held | `A9` binds every system unconditionally and is the least exercised axiom in the corpus. |
@@ -260,6 +261,7 @@ Open rows no live item cites, with their scores and the condition that would rev
 | `B95` | S2 | A4 signal | Claude deletes a source after flagging what the deletion loses, with `A4` and the rule against it both in its context. | `A4`'s trap is settled under `0104`, or `A4` or `AGENTS.md` section 5.5 is next changed |
 | `B70` | S3 | A8 signal | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. | either is documented, or a gate is refused on the distinction. |
 | `B76` | S3 | A12 signal | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. | .f.5` and `adherence-a13.on-trigger-b.f.9` at the time limit after 22 and 19 tool calls, 9 and 6 of them corpus reads; `adherence-a13.on-trigger-b.a.2` with no message after 22 seconds); whether that repeats the pattern - same model family, trap and arm, but no fetching storm - is for triage |
+| `B97` | S3 | A11 signal | Whether a probe separates readers holding the document from readers holding none is computed by hand. | `0107` is ratified, or the next evaluation through `tools/eval.mjs` |
 | `B12` | S4 | A14 signal | The recovery methodology for a brownfield vision is unwritten and its reasoning is untested. | the first external brownfield adopter reports back. Waiting is deliberate - their run is the only evidence available and costs nothing. |
 | `B19` | S4 | A14 signal | Methodology has nothing proportionate for a small design decision. | a small design decision fails in a way an anchoring check would have caught. |
 | `B22` | S4 | A9 signal | `A9` binds every system unconditionally and is the least exercised axiom in the corpus. | a deployment fails in a way chaos validation would have caught, or `A9` is cited as the reason a change was refused. |

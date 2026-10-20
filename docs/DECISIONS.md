@@ -147,7 +147,8 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0103 | 2026-10-20 | `A4`'s and `M10`'s hydration triggers stay as they were: `0102`'s rewrites were tested and neither is adopted, `A4`'s refuted and `M10`'s inconclusive. | general | director | ratified | supersedes 0102 | `axioms/A4-zero-loss-knowledge.md`, `methods/M10-guided-dialogue.md` | yes |
 | 0104 | 2026-10-20 | `adherence-a4-record` replaces `adherence-a4` as `A4`'s adherence trap if a pre-registered run shows agents given every axiom meet its first property at least 0.3 more often than agents given none; otherwise the trap is redesigned. | project | director | ratified | - | - | - |
 | 0105 | 2026-10-20 | `0104`'s validation is repeated as a fresh pre-registered run, `control` and `always-on` only, six runs per cell, judged on its own and never pooled with the first; if it separates, `adherence-a4-record` replaces `adherence-a4` as `0104` proposes, and otherwise the result returns to the director. | project | director | ratified | amends 0104 | - | - |
-| 0106 | 2026-10-20 | `M2` requires that a probe, a trap included, judge a change only if it separates readers holding the document from readers holding none, checked in an earlier record where one exists and otherwise in the run that judges the change. | general | director | proposed | - | `methods/M2-test-drive-docs-by-execution.md` | pending |
+| 0106 | 2026-10-20 | `M2` requires that a probe, a trap included, judge a change only if it separates readers holding the document from readers holding none, checked in an earlier record where one exists and otherwise in the run that judges the change. | general | director | superseded by 0107 | - | `methods/M2-test-drive-docs-by-execution.md` | pending |
+| 0107 | 2026-10-20 | `M2` requires that a probe, a trap included, judge a change only if readers holding either version score differently on it from readers holding nothing, by a margin stated before the run, judged on what readers decide; a probe that does not separate counts for nothing in a change's favour and still counts against it. | general | director | proposed | supersedes 0106 | `methods/M2-test-drive-docs-by-execution.md` | pending |
 
 ---
 
@@ -1836,3 +1837,73 @@ A comprehension test shows whether readers can state the rule, not whether agent
 
 **Source.**\
 `[V, director selection 2026-10-20 ("continue", M6.2); docs/BACKLOG.md B94; docs/DECISIONS.md 0103]`
+
+**Superseded before any reader ran.**\
+A fresh reader's audit of this ruling and its test (`docs/audits/M6.2-m2-separation-axiom-audit.md`) found the wording's boundary drawn in the wrong place - one-sided, with no margin, and dropping a control probe even when the change damaged it - and the test unable to see damage or to guarantee that its new-version arm held the changed text; `0107` replaces both.
+
+**Correction.**\
+The first row of the table above says `B88` spent 96 cells on a trap; its test spent 24 of its 96 cells on `adherence-a4`, and the other 72 on three other scenarios.
+
+### 0107
+
+**Ruling, proposed.**\
+`M2` gains a rule for reasoning documents, as its rule 4, under `M13`'s rule for modifying a member, and its reasoning example adds readers given nothing (`B94`, M6.2).\
+It supersedes `0106`, whose wording an audit refuted before any reader ran, and lands only after the pre-registered test below; until then it is held on the local branch `m6-2-separation`, at `c35db76b45e616318357bcd6375a2acce0e8780d`.
+
+**Each changed sentence.**
+
+| Sentence | Reason |
+|---|---|
+| Let a probe judge a change only if it can tell readers holding the document from readers holding none. | The rule; `B88`'s test spent 24 of its 96 cells on a trap whose guided and unguided arms the second pass had already shown scoring alike (`0103`). |
+| Readers holding either version must score differently on it from readers holding nothing - better or worse - by a margin stated before the run; a probe that capable readers pass, or fail, whatever they hold measures the reader, not the document, and cannot show an improvement. | Two-sided, as the rule's heading is, so a version that misleads readers counts; the margin is left to the pre-registration, since `0104` and `0106` read "measurably" two ways in one day; "cannot show an improvement" replaces `0106`'s claim that such a probe cannot catch damage, which is false. |
+| Check this in an earlier run's record before spending a new run, where that record already gave the same probe to readers holding the content it tests and to readers holding nothing; otherwise give readers holding nothing the same probes in the run that judges the change. | The cheaper route first, as `B88`'s check was one query; bounded, because a record holding only the old version cannot show a probe of what a change adds. |
+| A probe that does not separate them counts for nothing in the change's favour, and still counts against it if readers of the new version do worse on it than readers of the old. | Keeps rule 3's purpose, catching damage, and agrees with `tools/eval.mjs compare`, which fails a probe whose new mean falls below the old. |
+| Judge separation on what readers decide, not on whether they cite the document, which readers holding nothing cannot do. | Without it, rule 6's grounded-answer scoring makes every comprehension probe separate by construction. |
+| Control probes need this as much as the rest. | Without it, rule 3 reads as an exemption. |
+| A trap - a task that shows whether an agent acts on guidance, not what it can answer - is held to this rule too. | The defect it answers was in a trap; "held to this rule" rather than `0106`'s "a probe in this sense", which would extend rules 5 to 9 to traps. |
+| Example: three fresh readers get the old charter, three the new and three nothing, blind; the controls score identically on both versions, and above the readers given nothing. | An author working from the example, as `PC1` directs, would otherwise skip the rule. |
+
+Rules 4 to 8 become 5 to 9; nothing outside `M2` cites those numbers, searched by the audit and again at landing.
+
+**Audit.**\
+A fresh reader audited `0106` against `M7` before any reader ran: verdict `revise-before-implementation`, saved as `docs/audits/M6.2-m2-separation-axiom-audit.md`.\
+Its deltas are applied: D1 the rule as above, worded "score differently ... better or worse" where it proposed "do better ... or worse"; D2 the example; D3 the test below; D4 the cell count, corrected under banners in `0106` and `B94`; D5 the mechanisation, filed as `B97`.\
+The key was audited twice by fresh readers before any reader ran, the second time against the revised wording, and both audits' findings are applied and recorded in `docs/audits/M6.2-testdrive-key-audit.md`; the second audit's replacements were applied word for word and not audited a third time.
+
+**Test, pre-registered before the run.**\
+Experiment `m2-separation`, scenario `testdrive`: six probes, `Q1` and `Q2` on the new concern and `Q3` to `Q6` controls the old version answers.\
+Arms: `control`, holding nothing; `m2-base`, holding only `M2` at `1de4b10aabd9d26819512e5e94a4dd7261b5e978`; `m2-head`, holding only `M2` at `c35db76b45e616318357bcd6375a2acce0e8780d`; each delivered as an instruction and nothing else.\
+Population `c`, `a`, `f`, `o`, three runs per cell, judges `c`, `a`, `o`, two per outcome; a cell meets a probe when its judges' mean is at least 1.5 of 2.\
+Rubrics score what an answer says, not whether it is grounded, as the new rule's fifth sentence asks and departing from rule 6, since readers holding nothing can never ground an answer.\
+Verdicts are computed by `docs/evals/context-lab/analysis/m2-separation-predicates.mjs`, which refuses a run whose two versions were not the pinned revisions:
+
+- **S - separation, per probe.** A probe separates if either version meets it at least 0.3 more often, or 0.3 less often, than `control`. A screen, not a test: at 12 cells per arm it needs a gap of four cells.
+- **T - the new concern.** On the target probes that separate, pooled, `m2-head` against `m2-base`: holds if at least 0.25 higher with two-sided Fisher exact p below 0.05; refuted if not higher; unrunnable if no target probe separates.
+- **G - guard.** Holds if, on the control probes that separate, pooled, `m2-head` falls no more than 0.10 below `m2-base`, and on no probe of the six, target or control, separating or not, does `m2-head` meet it at least 0.3 less often than `m2-base`; refuted otherwise; unrunnable only if no control probe separates and no probe falls.
+- **D - descriptive.** Mean score per probe and arm, the target probes per member, and any incomplete value.
+
+**Decision rule.**\
+T and G both hold: the change goes to the director for ratification, then lands.\
+T or G refuted: the wording is revised and returns to the director.\
+Otherwise: to the director with the numbers.
+
+**Expected power, stated in advance.**\
+If one target probe separates, T holds at 12 cells per arm only on a large gap: `m2-base` at 3 of 12 needs `m2-head` at 9 (p 0.039), at 6 needs 12 (p 0.014); if both separate, `m2-base` at 8 of 24 needs 16 (p 0.042), at 12 needs 20 (p 0.031).\
+Cells of one model are not independent.\
+Capable readers may give the new rule's answers unaided, as general experimental practice; then the target probes do not separate, T is unrunnable, and the run shows that this comprehension test cannot see the change, which is the rule at work.\
+A comprehension test shows whether readers can state the rule, not whether agents act on it.
+
+**Closeout hooks, from the audit.**\
+Report the revisions `run.json` gives for both versions; S for every probe, with its direction; `m2-base` against `control` on `Q2`, which measures this ruling's claim that without the new sentence rule 3 reads as an exemption; and the readers' observations, read before the verdicts.\
+At landing, search again for citations of the renumbered rules.
+
+**Alternatives refuted.**\
+A check in tooling only - a tool runs only when chosen, and the method is what an agent reads when designing a test; its mechanisation is filed as `B97`.\
+Traps only, as M6.2 is worded - comprehension probes show the same class.\
+Rule 6's self-labels instead of readers given nothing - an instrument reporting on itself.\
+Doing nothing - `B88`'s spend recurs.
+
+**Named costs.** 36 cells, each holding one short document or none.
+
+**Source.**\
+`[V, director selection 2026-10-20 ("continue", M6.2); docs/audits/M6.2-m2-separation-axiom-audit.md; docs/audits/M6.2-testdrive-key-audit.md; docs/BACKLOG.md B94; docs/DECISIONS.md 0103 and 0106]`
