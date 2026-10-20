@@ -48,15 +48,20 @@ Its job is to change what a reader can decide, so it is tested by giving fresh r
 3. **Include control probes the old version should already answer well.**
    They are what lets the test fail the new version: a change that improves
    three answers and damages two is not an improvement.
-4. **Use fresh readers holding only the document.** No session history, no
+4. **Let a probe judge a change only if it can tell readers holding the document from readers holding none.**
+   Readers holding the document must do measurably better on it; a probe that capable readers pass, or fail, whatever they hold measures the reader, not the document, and can neither confirm a change nor catch one.
+   Check this in an earlier run's record where one exists, before spending a new run; otherwise give readers holding nothing the same probes in the run that judges the change, and let a probe that does not separate them decide nothing.
+   Control probes need this as much as the rest.
+   A trap - a task that shows whether an agent acts on guidance, not what it can answer - is a probe in this sense.
+5. **Use fresh readers holding only the document.** No session history, no
    repository, no knowledge of which version they hold. Blind the versions.
-5. **Require readers to separate what the document says from what they guess.**
+6. **Require readers to separate what the document says from what they guess.**
    A correct guess is not evidence the document works; it is evidence the
    reader is capable. Score a grounded answer above an ungrounded one.
-6. **Run several readers per version.** One reader's answer is an anecdote.
-7. **When the scorer authored the change, ties go to the original.** The bias
+7. **Run several readers per version.** One reader's answer is an anecdote.
+8. **When the scorer authored the change, ties go to the original.** The bias
    runs one way, so the correction must too.
-8. **Read what the readers found, not only how they scored.** Fresh readers
+9. **Read what the readers found, not only how they scored.** Fresh readers
    flag defects the author cannot see, including defects outside the document
    under test - in the members it governs, or in what it cites.
    **When most readers hedge on one probe, look for an ambiguity in the document before blaming the key.**
