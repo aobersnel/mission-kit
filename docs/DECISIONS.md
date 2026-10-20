@@ -142,6 +142,7 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0098 | 2026-10-18 | `A3`'s and `A14`'s hydration triggers name the moment the axiom is breached - one module reaching past another's declared interface; a workaround that leaves a known root cause unfixed and unrecorded - and `AGENTS.md` section 5.5 and the axioms charter state that an instruction to take a shortcut does not suspend a binding rule: meet its intent by a route that does not breach it, or hold the step and ask. | general | director | ratified | - | `axioms/A3-sovereign-composition.md`, `axioms/A14-compounding-learning.md`, `axioms/README.md`, `AGENTS.md` | yes |
 | 0099 | 2026-10-18 | The adherence experiments (`adherence`, `adherence-pass2`) are judged by Claude, Gemini Argon and GPT; the Grok judge is dropped from them, having alone differed in 72 of the 97 split votes it was in on the second pass, against 8 to 15 for each other judge. | project | director | ratified | - | - | - |
 | 0100 | 2026-10-18 | Grok (`x`, `grok-4.20-non-reasoning`) is dropped from mission-kit's evaluation pack: from its population, and from every experiment as agent and as judge; the model list is reconsidered separately. | project | director | ratified | amends 0099 | - | - |
+| 0101 | 2026-10-20 | The evaluation pack keeps its four models - Claude Opus 5.5, Gemini 4 Argon, Gemini 3.8 Flash and GPT-6 Astra - with no replacement for Grok; no other model family is requested from the endpoint for now. | project | director | ratified | - | - | - |
 
 ---
 
@@ -1585,3 +1586,33 @@ No run was labelled exploration as a result, because none of the five ran in bet
 
 **Source.**\
 `[V, director ruling 2026-10-18 ("drop grok - we will reconsider our model list separately"); docs/evals/runs/context-lab/2026-10-18-093310-adherence-pass2 and 2026-10-18-111520-adherence-rule-repeat cells]`
+
+### 0101
+
+**Ruling.**\
+`docs/evals/context-lab/pack.json` keeps `c`, `a`, `f` and `o` as its population, and every experiment its current judges; Grok is not replaced, and no other model family is requested from the endpoint's operator for now.
+
+**Evidence.**\
+The endpoint serves Claude Opus 5.5, Gemini 4 Argon, Gemini 3.8 Flash and Grok 4.20 non-reasoning only, and Codex's other models are GPT, so no new family was available.\
+Across the second adherence pass, its repeat, `2026-10-19-215747-aa` and `2026-10-20-052459-c2`:
+
+- Adherence per property, without guidance and with it on request: Claude 0.43 and 1.00, Gemini Argon 0.26 and 0.88, Gemini Flash 0.13 and 0.71, GPT 0.26 and 0.69.
+- Each opened the guidance folder, where that was the only route, in 78 to 90 of 90 cells.
+- Each lost at most 2 of 212 cells.
+- The judge pairs agreed on 94 to 96 percent of the A/A run's outcomes.
+
+`aa-gate`'s thresholds were derived on this design (`B90`), so keeping it needs no re-derivation.
+
+**Alternatives refuted.**\
+A second GPT model - more cells and a re-derivation, with no new family.\
+Dropping Gemini Flash - fewer cells and a re-derivation, losing the population's lowest baseline.\
+Asking the operator for another family - the only route to a fourth judging family, deferred rather than refuted.
+
+**Named costs.**\
+No model in the population ignores guidance, as Grok did, so results say less about such a model; Gemini counts twice among agents in pooled figures.
+
+**Disclosed.**\
+The director chose the first option of a list whose recommendation was it together with the operator request, and declined the request for now.
+
+**Source.**\
+`[V, director ruling 2026-10-20 ("continue, option 1 only for now"); docs/BACKLOG.md B91]`

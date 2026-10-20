@@ -44,7 +44,8 @@ next: none selected - see Decisions required
 Since M4 closed: every axiom has an adherence trap (`B73`); the second adherence pass rewrote `A3`'s and `A14`'s hydration triggers and added the rule that a shortcut instruction does not suspend a binding rule (`0098`), confirmed by a pre-registered repeat (`B89`); Grok left the evaluation pack (`0100`), and `aa-gate`'s thresholds were re-derived for the four-model design (`B90`).\
 With no milestone selected, the work since has followed incoming requests and the findings of runs.
 
-**To return to:** the communication-moves matrix (`B42`), when the director has a session; the model list (`B91`); `B70`, which waits on bug 249's details.
+**To return to:** the communication-moves matrix (`B42`), when the director has a session; `B70`, which waits on bug 249's details.\
+The model list is settled: the pack keeps its four models (`0101`).
 
 ---
 
@@ -118,7 +119,6 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | `B85` | S4 | A3 signal | held | No pattern holds one long-lived caller, started on demand and shared by short-lived processes, though the shape recurs independently. |
 | `B86` | S4 | A7 signal | held | No pattern holds honest call endings - answered, refused, not delivered, unknown - with an identity that lets a repeat be recognised, though the shape recurs and the corpus names idempotency only as a primitive (`A11`). |
 | `B88` | S4 | A12 signal | held | Agents rarely open `A4` or `M10` when they apply. |
-| `B91` | S4 | A8 signal | held | Which models the evaluation pack holds is unreviewed. |
 | `B92` | S4 | A12 signal | held | What earns always-loaded context is measured for the axioms and not for the ledger and standing context. |
 | `B39` | S5 | A3 signal | held | Style cannot be scoped by medium. |
 <!-- END GENERATED: ledger -->
@@ -274,7 +274,6 @@ Open rows no live item cites, with their scores and the condition that would rev
 | `B85` | S4 | A3 signal | No pattern holds one long-lived caller, started on demand and shared by short-lived processes, though the shape recurs independently. | operation-proxy is built and its start, staleness and idle-ending tests pass |
 | `B86` | S4 | A7 signal | No pattern holds honest call endings - answered, refused, not delivered, unknown - with an identity that lets a repeat be recognised, though the shape recurs and the corpus names idempotency only as a primitive (`A11`). | operation-call is certified, so the entry can cite a working instance |
 | `B88` | S4 | A12 signal | Agents rarely open `A4` or `M10` when they apply. | the director selects a trigger rewrite for `A4` or `M10`, or the next adherence pass |
-| `B91` | S4 | A8 signal | Which models the evaluation pack holds is unreviewed. | the director's review of the model list |
 | `B92` | S4 | A12 signal | What earns always-loaded context is measured for the axioms and not for the ledger and standing context. | the director selects it, or the next change to what `AGENTS.md` or `INDEX.md` carries, or `B50`'s trigger |
 | `B39` | S5 | A3 signal | Style cannot be scoped by medium. | FIRED and moved: `S15` is the first single-medium rule; one rule does not earn a sub-set. TRIGGER: a second single-medium style rule. Nested sets need generator support, shared with `B38`'s set spanning layers. |
 <!-- END GENERATED: held -->
@@ -291,8 +290,7 @@ Each candidate is a legal move on an open row:
 
 | Row | Move | Why now | Cost |
 |---|---|---|---|
-| `B91` | Review which models the evaluation pack holds | It gates every further evaluation pass and the `aa-gate` thresholds, which must be re-derived for any change of models or judges | A director review; then one A/A run, about 360 cells |
-| `B88` | Rewrite `A4`'s and `M10`'s hydration triggers and test them as `A3`'s and `A14`'s were | Agents open `A4` in a third of the cells it applies to, and its trap scores as `control` does | One pre-registered run of the affected scenarios; best after `B91` |
+| `B88` | Rewrite `A4`'s and `M10`'s hydration triggers and test them as `A3`'s and `A14`'s were | Agents open `A4` in a third of the cells it applies to, and its trap scores as `control` does | One pre-registered run of the affected scenarios, on the settled four models |
 | `B76` | Re-triage the Gemini time-outs on the `A13` trap | A second run may have repeated them: three Gemini cells of `2026-10-19-215747-aa` ended there without a reply, though with 6 to 9 corpus reads, not a fetching storm | Reading the three transcripts |
 | `B92` | Decide what earns always-loaded context | Pass 2 found the axioms always loaded bought no adherence in 12 of 15 scenarios at 27 percent more input tokens; whether `INDEX.md` and `AGENTS.md` earn theirs is unmeasured | One experiment with an arm that withholds them |
 | - | Select none | Work stays reactive | Nothing now |
