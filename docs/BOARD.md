@@ -43,7 +43,7 @@ M6  make every trap able to show its guidance    WIP  <- HERE
 **All five milestones are done.**\
 Since M4 closed: every axiom has an adherence trap (`B73`); the second adherence pass rewrote `A3`'s and `A14`'s hydration triggers and added the rule that a shortcut instruction does not suspend a binding rule (`0098`), confirmed by a pre-registered repeat (`B89`); Grok left the evaluation pack (`0100`), and `aa-gate`'s thresholds were re-derived for the four-model design (`B90`).\
 Testing a rewrite of `A4`'s trigger (`0103`) showed that `A4`'s trap cannot show whether `A4` works, the only trap of fifteen its guidance does not move; M6 builds one that can, and makes that a check every trap must pass.\
-The new trap, `adherence-a4-record`, met its key in 6 of 12 cells with guidance against 1 of 12 without, short of its pre-registered threshold (p 0.069, `0104`): Gemini Argon and GPT moved sharply, Claude and Gemini Flash not at all; what follows is the director's.
+The new trap, `adherence-a4-record`, met its key in 6 of 12 cells with guidance against 1 of 12 without, short of its pre-registered threshold (p 0.069, `0104`): Gemini Argon and GPT moved sharply, Claude and Gemini Flash not at all; the director chose a fresh pre-registered repeat with twice the cells per arm (`0105`).
 
 **To return to:** the communication-moves matrix (`B42`), when the director has a session; `B70`, which waits on bug 249's details.\
 The model list is settled: the pack keeps its four models (`0101`).
@@ -302,13 +302,5 @@ Open rows no live item cites, with their scores and the condition that would rev
 
 A decision is entered here when a move cannot proceed without a director ruling, naming what it blocks; once ruled it moves to [`DECISIONS.md`](DECISIONS.md) and leaves this list.
 
-**Rule on `0104`: what follows the new `A4` trap's inconclusive validation.**\
-It blocks M6.1: the trap met its key in 6 of 12 guided cells against 1 of 12 unguided (p 0.069 against a pre-registered 0.05).
-
-| Move | Cost |
-|---|---|
-| Repeat the validation as a fresh pre-registered run, `control` and `always-on` only, six runs per cell, not pooled with the first | 48 cells; about 0.8 chance it separates, if the first run's rates are the true ones |
-| Accept the trap now, overriding the pre-registered rule | Nothing now; a precedent against every later pre-registered verdict |
-| Redesign the trap, as the rule says | A new audit and run, with no defect found to fix: the two unmoved models fail for the reason the trap measures |
-| Do nothing | `A4` stays unmeasured and M6.1 stays open |
+None open.
 

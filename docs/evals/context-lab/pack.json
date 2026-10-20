@@ -475,7 +475,8 @@
     "experiments/adherence-pass2.json",
     "experiments/adherence-rule-repeat.json",
     "experiments/adherence-b88.json",
-    "experiments/adherence-a4-validate.json"
+    "experiments/adherence-a4-validate.json",
+    "experiments/adherence-a4-replicate.json"
   ],
   "suites": [
     {
@@ -655,6 +656,16 @@
     {
       "id": "adherence-a4-validate",
       "experiment": "adherence-a4-validate",
+      "select": {
+        "allTags": [
+          "adherence",
+          "exercises:A4"
+        ]
+      }
+    },
+    {
+      "id": "adherence-a4-replicate",
+      "experiment": "adherence-a4-replicate",
       "select": {
         "allTags": [
           "adherence",

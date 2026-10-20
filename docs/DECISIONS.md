@@ -146,6 +146,7 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0102 | 2026-10-20 | `A4`'s and `M10`'s hydration triggers name the situation they apply to - writing a record, summary or handover a later reader will rely on instead of its source; writing a message that asks a human to decide or to understand what they lack the context for. | general | director | superseded by 0103 | - | `axioms/A4-zero-loss-knowledge.md`, `methods/M10-guided-dialogue.md` | pending |
 | 0103 | 2026-10-20 | `A4`'s and `M10`'s hydration triggers stay as they were: `0102`'s rewrites were tested and neither is adopted, `A4`'s refuted and `M10`'s inconclusive. | general | director | ratified | supersedes 0102 | `axioms/A4-zero-loss-knowledge.md`, `methods/M10-guided-dialogue.md` | yes |
 | 0104 | 2026-10-20 | `adherence-a4-record` replaces `adherence-a4` as `A4`'s adherence trap if a pre-registered run shows agents given every axiom meet its first property at least 0.3 more often than agents given none; otherwise the trap is redesigned. | project | director | proposed | - | - | - |
+| 0105 | 2026-10-20 | `0104`'s validation is repeated as a fresh pre-registered run, `control` and `always-on` only, six runs per cell, judged on its own and never pooled with the first; if it separates, `adherence-a4-record` replaces `adherence-a4` as `0104` proposes, and otherwise the result returns to the director. | project | director | ratified | amends 0104 | - | - |
 
 ---
 
@@ -1743,3 +1744,31 @@ Gemini Flash met it in none of 9 and said nothing of the loss.\
 
 **Source.**\
 `[V, director selection 2026-10-20, M6.1 (B93); key audit by a fresh general sub-agent, session ses_ea7a54a2dffejLh6EXylmVXK6h; docs/evals/runs/context-lab/2026-10-18-093310-adherence-pass2; docs/evals/runs/context-lab/2026-10-20-083243-adherence-a4-validate]`
+
+### 0105
+
+**Ruling.**\
+`0104`'s validation of `adherence-a4-record` is repeated as a fresh run, pre-registered here, in place of the redesign `0104`'s decision rule named for an inconclusive result.\
+If the repeat separates, `adherence-a4-record` replaces `adherence-a4` as `A4`'s adherence trap, as `0104` proposes, and `B93` closes; otherwise the result returns to the director.
+
+**Why not redesign.**\
+The first run found no defect to fix: the two models guidance did not move failed for the reason the trap measures, and the two it moved met the key in all 12 of their guided cells.
+
+**Test, pre-registered before the run.**\
+Experiment `adherence-a4-replicate`: the one scenario, arms `control` and `always-on`, population `c`, `a`, `f`, `o`, six runs per cell, judges `c`, `a`, `o`, two per outcome, the key unchanged.\
+Its record is judged on its own; no figure from `2026-10-20-083243-adherence-a4-validate` enters any verdict.\
+Verdicts are computed by `docs/evals/context-lab/analysis/a4-validate-predicates.mjs`, unchanged since `0104`: V1 decides, by `0104`'s rule; V2 is unrunnable by design, having no `on-trigger` arm; V3 is descriptive.
+
+**Expected power, stated in advance.**\
+At 24 cells per arm, if the first run's rates are the true ones (0.50 guided, 0.08 unguided), V1 separates with probability about 0.8; if the unguided rate is 0.20, about 0.5.\
+Cells of one model are counted as independent, which they are not: the first run's effect lay wholly in two of four models, and a repeat adds runs, not models.
+
+**Named costs.** 48 cells, about 12 million input tokens at the first run's means.
+
+**Alternatives refuted.**\
+Accepting the trap on the first run - an override of a pre-registered rule.\
+Redesigning it - a new audit and run with no defect found to fix.\
+Doing nothing - `A4` stays unmeasured.
+
+**Source.**\
+`[V, director ruling 2026-10-20 ("continue", the repeat recommended); docs/DECISIONS.md 0104; docs/evals/runs/context-lab/2026-10-20-083243-adherence-a4-validate]`
