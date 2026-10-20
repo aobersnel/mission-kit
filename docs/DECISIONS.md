@@ -143,7 +143,8 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0099 | 2026-10-18 | The adherence experiments (`adherence`, `adherence-pass2`) are judged by Claude, Gemini Argon and GPT; the Grok judge is dropped from them, having alone differed in 72 of the 97 split votes it was in on the second pass, against 8 to 15 for each other judge. | project | director | ratified | - | - | - |
 | 0100 | 2026-10-18 | Grok (`x`, `grok-4.20-non-reasoning`) is dropped from mission-kit's evaluation pack: from its population, and from every experiment as agent and as judge; the model list is reconsidered separately. | project | director | ratified | amends 0099 | - | - |
 | 0101 | 2026-10-20 | The evaluation pack keeps its four models - Claude Opus 5.5, Gemini 4 Argon, Gemini 3.8 Flash and GPT-6 Astra - with no replacement for Grok; no other model family is requested from the endpoint for now. | project | director | ratified | - | - | - |
-| 0102 | 2026-10-20 | `A4`'s and `M10`'s hydration triggers name the situation they apply to - writing a record, summary or handover a later reader will rely on instead of its source; writing a message that asks a human to decide or to understand what they lack the context for. | general | director | proposed | - | `axioms/A4-zero-loss-knowledge.md`, `methods/M10-guided-dialogue.md` | pending |
+| 0102 | 2026-10-20 | `A4`'s and `M10`'s hydration triggers name the situation they apply to - writing a record, summary or handover a later reader will rely on instead of its source; writing a message that asks a human to decide or to understand what they lack the context for. | general | director | superseded by 0103 | - | `axioms/A4-zero-loss-knowledge.md`, `methods/M10-guided-dialogue.md` | pending |
+| 0103 | 2026-10-20 | `A4`'s and `M10`'s hydration triggers stay as they were: `0102`'s rewrites were tested and neither is adopted, `A4`'s refuted and `M10`'s inconclusive. | general | director | ratified | supersedes 0102 | `axioms/A4-zero-loss-knowledge.md`, `methods/M10-guided-dialogue.md` | yes |
 
 ---
 
@@ -1667,3 +1668,19 @@ So the trap's shortfall is one model not taking a decision-recording task as one
 
 **Source.**\
 `[V, director selection 2026-10-20 ("continue"), B88; docs/evals/runs/context-lab/2026-10-18-093310-adherence-pass2 hydration]`
+
+### 0103
+
+**Ruling.**\
+`A4`'s and `M10`'s hydration triggers are unchanged; `0102`'s rewrites are not adopted.\
+`A4`'s was refuted by its pre-registered test and reverted under its decision rule; `M10`'s test was inconclusive (10 of 12 cells opened it against 8 of 12), and the director reverted it rather than land a change its test did not show to help.
+
+**What the test found instead.**\
+`adherence-a4` cannot show whether `A4` works: across the second adherence pass and `adherence-b88`, each model scores the same on it in every arm - Gemini Argon, Claude and GPT meet all its properties with no guidance, and Gemini Flash meets none with `A4` loaded in its context - so guidance gains it +0.02 against +0.20 to +0.80 on each other trap.\
+`B88`, which took the trap's low score for a routing failure, is closed on this; building a trap that can show `A4`'s effect is `B93`.
+
+**Disclosed.**\
+`B88` was chosen from routing numbers alone; whether its trap could show any effect was checkable from the second pass's record in one query, and was checked only after 96 cells were spent; that check is `B94`.
+
+**Source.**\
+`[V, director ruling 2026-10-20 ("continue as recommended"); docs/evals/runs/context-lab/2026-10-20-072254-adherence-b88; docs/evals/runs/context-lab/2026-10-18-093310-adherence-pass2]`

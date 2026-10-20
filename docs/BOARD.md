@@ -37,12 +37,12 @@ M2  hold what we prescribe                       DONE
 M3  make composition real                        DONE
 M4  conventions and enforcement                  DONE
 M5  bring the charters to E4                     DONE
-next: none selected - see Decisions required
+M6  make every trap able to show its guidance    WIP  <- HERE
 ```
 
 **All five milestones are done.**\
 Since M4 closed: every axiom has an adherence trap (`B73`); the second adherence pass rewrote `A3`'s and `A14`'s hydration triggers and added the rule that a shortcut instruction does not suspend a binding rule (`0098`), confirmed by a pre-registered repeat (`B89`); Grok left the evaluation pack (`0100`), and `aa-gate`'s thresholds were re-derived for the four-model design (`B90`).\
-With no milestone selected, the work since has followed incoming requests and the findings of runs.
+Testing a rewrite of `A4`'s trigger (`0103`) showed that `A4`'s trap cannot show whether `A4` works, the only trap of fifteen its guidance does not move; M6 builds one that can, and makes that a check every trap must pass.
 
 **To return to:** the communication-moves matrix (`B42`), when the director has a session; `B70`, which waits on bug 249's details.\
 The model list is settled: the pack keeps its four models (`0101`).
@@ -83,8 +83,10 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 |---|---|---|---|---|
 | `B21` | S2 | A4 mandate | held | No axiom states the property that protects an agent against its own error. |
 | `B18` | S4 | A4 mandate | held | Methodology has no procedure for handing over work in progress. |
+| `B93` | S2 | A4 signal | M6.1 | No trap can show whether `A4` changes what an agent does. |
 | `B70` | S3 | A8 signal | held | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. |
 | `B76` | S3 | A12 signal | held | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. |
+| `B94` | S3 | A8 signal | M6.2 | A trap judges a change before anyone checks it can show an effect. |
 | `B12` | S4 | A14 signal | held | The recovery methodology for a brownfield vision is unwritten and its reasoning is untested. |
 | `B19` | S4 | A14 signal | held | Methodology has nothing proportionate for a small design decision. |
 | `B22` | S4 | A9 signal | held | `A9` binds every system unconditionally and is the least exercised axiom in the corpus. |
@@ -118,7 +120,6 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | `B84` | S4 | A2 signal | held | A registry entry's Contract section is restated by hand beside the component's own contract, the two drift, and no schema holds the capability-table form eight component repositories already use. |
 | `B85` | S4 | A3 signal | held | No pattern holds one long-lived caller, started on demand and shared by short-lived processes, though the shape recurs independently. |
 | `B86` | S4 | A7 signal | held | No pattern holds honest call endings - answered, refused, not delivered, unknown - with an identity that lets a repeat be recognised, though the shape recurs and the corpus names idempotency only as a primitive (`A11`). |
-| `B88` | S4 | A12 signal | held | Agents rarely open `A4` or `M10` when they apply. |
 | `B92` | S4 | A12 signal | held | What earns always-loaded context is measured for the axioms and not for the ledger and standing context. |
 | `B39` | S5 | A3 signal | held | Style cannot be scoped by medium. |
 <!-- END GENERATED: ledger -->
@@ -229,6 +230,21 @@ The charter checker tests fixed headings by name and free concerns by declared l
 
 ---
 
+## M6 - make every trap able to show its guidance - `WIP`
+
+A trap measures an axiom only if agents given the guidance behave differently from agents without it.\
+The second adherence pass showed that for fourteen of fifteen traps, and not for `A4`'s.
+
+| # | Item | Row | Status |
+|---|---|---|---|
+| M6.1 | **Build an `A4` trap that separates guided from unguided agents**, key audited by a fresh reader, and its separation measured before it judges anything | `B93` | `WIP` |
+| M6.2 | Require of every trap, in `M2`, that it separate guided from unguided agents before it judges a change | `B94` | `TODO` |
+
+**Exit criteria.**\
+`A4` has a trap on which guided agents score measurably above unguided ones, and `M2` requires that of every trap before it judges a change.
+
+---
+
 ## Held
 
 Open rows no live item cites, with their scores and the condition that would revive each; generated from the record.
@@ -273,7 +289,6 @@ Open rows no live item cites, with their scores and the condition that would rev
 | `B84` | S4 | A2 signal | A registry entry's Contract section is restated by hand beside the component's own contract, the two drift, and no schema holds the capability-table form eight component repositories already use. | the first component is filed with its entry generated from its contract, or a second, unrelated project writes contracts in this shape |
 | `B85` | S4 | A3 signal | No pattern holds one long-lived caller, started on demand and shared by short-lived processes, though the shape recurs independently. | operation-proxy is built and its start, staleness and idle-ending tests pass |
 | `B86` | S4 | A7 signal | No pattern holds honest call endings - answered, refused, not delivered, unknown - with an identity that lets a repeat be recognised, though the shape recurs and the corpus names idempotency only as a primitive (`A11`). | operation-call is certified, so the entry can cite a working instance |
-| `B88` | S4 | A12 signal | Agents rarely open `A4` or `M10` when they apply. | the director selects a trigger rewrite for `A4` or `M10`, or the next adherence pass |
 | `B92` | S4 | A12 signal | What earns always-loaded context is measured for the axioms and not for the ledger and standing context. | the director selects it, or the next change to what `AGENTS.md` or `INDEX.md` carries, or `B50`'s trigger |
 | `B39` | S5 | A3 signal | Style cannot be scoped by medium. | FIRED and moved: `S15` is the first single-medium rule; one rule does not earn a sub-set. TRIGGER: a second single-medium style rule. Nested sets need generator support, shared with `B38`'s set spanning layers. |
 <!-- END GENERATED: held -->
@@ -284,14 +299,5 @@ Open rows no live item cites, with their scores and the condition that would rev
 
 A decision is entered here when a move cannot proceed without a director ruling, naming what it blocks; once ruled it moves to [`DECISIONS.md`](DECISIONS.md) and leaves this list.
 
-**Select the next milestone.**\
-It blocks all planned work: until one is selected, work follows incoming requests and the findings of runs.\
-Each candidate is a legal move on an open row:
-
-| Row | Move | Why now | Cost |
-|---|---|---|---|
-| `B88` | Rewrite `A4`'s and `M10`'s hydration triggers and test them as `A3`'s and `A14`'s were | Agents open `A4` in a third of the cells it applies to, and its trap scores as `control` does | One pre-registered run of the affected scenarios, on the settled four models |
-| `B76` | Re-triage the Gemini time-outs on the `A13` trap | A second run may have repeated them: three Gemini cells of `2026-10-19-215747-aa` ended there without a reply, though with 6 to 9 corpus reads, not a fetching storm | Reading the three transcripts |
-| `B92` | Decide what earns always-loaded context | Pass 2 found the axioms always loaded bought no adherence in 12 of 15 scenarios at 27 percent more input tokens; whether `INDEX.md` and `AGENTS.md` earn theirs is unmeasured | One experiment with an arm that withholds them |
-| - | Select none | Work stays reactive | Nothing now |
+None open.
 
