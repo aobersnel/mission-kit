@@ -43,7 +43,7 @@ M6  make every trap able to show its guidance    WIP  <- HERE
 **All five milestones are done.**\
 Since M4 closed: every axiom has an adherence trap (`B73`); the second adherence pass rewrote `A3`'s and `A14`'s hydration triggers and added the rule that a shortcut instruction does not suspend a binding rule (`0098`), confirmed by a pre-registered repeat (`B89`); Grok left the evaluation pack (`0100`), and `aa-gate`'s thresholds were re-derived for the four-model design (`B90`).\
 Testing a rewrite of `A4`'s trigger (`0103`) showed that `A4`'s trap cannot show whether `A4` works, the only trap of fifteen its guidance does not move; M6 builds one that can, and makes that a check every trap must pass.\
-The new trap, `adherence-a4-record`, has its key audited and its test pre-registered (`0104`); the run decides whether it replaces the old one.
+The new trap, `adherence-a4-record`, met its key in 6 of 12 cells with guidance against 1 of 12 without, short of its pre-registered threshold (p 0.069, `0104`): Gemini Argon and GPT moved sharply, Claude and Gemini Flash not at all; what follows is the director's.
 
 **To return to:** the communication-moves matrix (`B42`), when the director has a session; `B70`, which waits on bug 249's details.\
 The model list is settled: the pack keeps its four models (`0101`).
@@ -85,6 +85,7 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | `B21` | S2 | A4 mandate | held | No axiom states the property that protects an agent against its own error. |
 | `B18` | S4 | A4 mandate | held | Methodology has no procedure for handing over work in progress. |
 | `B93` | S2 | A4 signal | M6.1 | No trap can show whether `A4` changes what an agent does. |
+| `B95` | S2 | A4 signal | held | Claude deletes a source after flagging what the deletion loses, with `A4` and the rule against it both in its context. |
 | `B70` | S3 | A8 signal | held | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. |
 | `B76` | S3 | A12 signal | held | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. |
 | `B94` | S3 | A8 signal | M6.2 | A trap judges a change before anyone checks it can show an effect. |
@@ -255,6 +256,7 @@ Open rows no live item cites, with their scores and the condition that would rev
 |---|---|---|---|---|
 | `B21` | S2 | A4 mandate | No axiom states the property that protects an agent against its own error. | a lone agent ships a claim it corroborated itself and was wrong, or the axiom set is next audited. Whether this is a new axiom or a property an existing one should state - `A8`'s gating and `A4`'s zero-loss are the nearest - is a question for the set. |
 | `B18` | S4 | A4 mandate | Methodology has no procedure for handing over work in progress. | a handover loses information that a procedure would have preserved, or `M5` converts `M0` and the gap becomes a stated thinness. |
+| `B95` | S2 | A4 signal | Claude deletes a source after flagging what the deletion loses, with `A4` and the rule against it both in its context. | `A4`'s trap is settled under `0104`, or `A4` or `AGENTS.md` section 5.5 is next changed |
 | `B70` | S3 | A8 signal | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. | either is documented, or a gate is refused on the distinction. |
 | `B76` | S3 | A12 signal | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. | .f.5` and `adherence-a13.on-trigger-b.f.9` at the time limit after 22 and 19 tool calls, 9 and 6 of them corpus reads; `adherence-a13.on-trigger-b.a.2` with no message after 22 seconds); whether that repeats the pattern - same model family, trap and arm, but no fetching storm - is for triage |
 | `B12` | S4 | A14 signal | The recovery methodology for a brownfield vision is unwritten and its reasoning is untested. | the first external brownfield adopter reports back. Waiting is deliberate - their run is the only evidence available and costs nothing. |
@@ -300,5 +302,13 @@ Open rows no live item cites, with their scores and the condition that would rev
 
 A decision is entered here when a move cannot proceed without a director ruling, naming what it blocks; once ruled it moves to [`DECISIONS.md`](DECISIONS.md) and leaves this list.
 
-None open.
+**Rule on `0104`: what follows the new `A4` trap's inconclusive validation.**\
+It blocks M6.1: the trap met its key in 6 of 12 guided cells against 1 of 12 unguided (p 0.069 against a pre-registered 0.05).
+
+| Move | Cost |
+|---|---|
+| Repeat the validation as a fresh pre-registered run, `control` and `always-on` only, six runs per cell, not pooled with the first | 48 cells; about 0.8 chance it separates, if the first run's rates are the true ones |
+| Accept the trap now, overriding the pre-registered rule | Nothing now; a precedent against every later pre-registered verdict |
+| Redesign the trap, as the rule says | A new audit and run, with no defect found to fix: the two unmoved models fail for the reason the trap measures |
+| Do nothing | `A4` stays unmeasured and M6.1 stays open |
 

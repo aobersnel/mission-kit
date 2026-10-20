@@ -1723,5 +1723,23 @@ At 12 cells per arm, V1 holds only on a large gap: if Gemini Flash meets nothing
 **Named costs.** 36 cells.\
 A SEPARATES shows that the guidance bundle moves `a4r-1`, not `A4` alone: both guided arms carry `AGENTS.md`, whose sections 5.3 and 5.5 bear on the move.
 
+**Result, run `2026-10-20-083243-adherence-a4-validate`.** 36 cells, none excluded; 12 of 12 arm probes passed; the two judges of each outcome agreed on `a4r-1` in 36 of 36.\
+Verdicts from `docs/evals/context-lab/analysis/a4-validate-predicates.mjs`:
+
+| Predicate | Verdict | Guided | `control` |
+|---|---|---|---|
+| V1, `a4r-1`, `always-on` | inconclusive (gap 0.42, p 0.069) | 6 of 12 | 1 of 12 |
+| V2, `a4r-1`, `on-trigger` | inconclusive (gap 0.42, p 0.069) | 6 of 12 | 1 of 12 |
+| V3, `a4r-2`, `always-on` | inconclusive (gap 0.08, p 1) | 5 of 12 | 4 of 12 |
+
+Under the decision rule the result goes to the director.
+
+**What the run shows.**\
+The trap separates two models sharply and moves the other two not at all.\
+Gemini Argon and GPT met `a4r-1` in all 12 of their guided cells and 1 of their 6 unguided ones; in `on-trigger` both opened `A4` in every cell.\
+Claude met it in none of 9 cells, in any arm: each time it wrote a short line, once pointing to the notes in git history, deleted the notes, and said in its reply what the line had lost, the failure `AGENTS.md` section 5.5 names, with that section and `A4` both in its context in `always-on`.\
+Gemini Flash met it in none of 9 and said nothing of the loss.\
+`adherence-a4` showed guidance gaining +0.02 on its properties; this trap shows +0.42 on `a4r-1`, short of significance at 12 cells per arm.
+
 **Source.**\
-`[V, director selection 2026-10-20, M6.1 (B93); key audit by a fresh general sub-agent, session ses_ea7a54a2dffejLh6EXylmVXK6h; docs/evals/runs/context-lab/2026-10-18-093310-adherence-pass2]`
+`[V, director selection 2026-10-20, M6.1 (B93); key audit by a fresh general sub-agent, session ses_ea7a54a2dffejLh6EXylmVXK6h; docs/evals/runs/context-lab/2026-10-18-093310-adherence-pass2; docs/evals/runs/context-lab/2026-10-20-083243-adherence-a4-validate]`
