@@ -43,7 +43,7 @@ M6  make every trap able to show its guidance    WIP  <- HERE
 **All five milestones are done.**\
 Since M4 closed: every axiom has an adherence trap (`B73`); the second adherence pass rewrote `A3`'s and `A14`'s hydration triggers and added the rule that a shortcut instruction does not suspend a binding rule (`0098`), confirmed by a pre-registered repeat (`B89`); Grok left the evaluation pack (`0100`), and `aa-gate`'s thresholds were re-derived for the four-model design (`B90`).\
 Testing a rewrite of `A4`'s trigger (`0103`) showed that `A4`'s trap cannot show whether `A4` works, the only trap of fifteen its guidance does not move; M6 builds one that can, and makes that a check every trap must pass.\
-The new trap, `adherence-a4-record`, met its key in 6 of 12 cells with guidance against 1 of 12 without, short of its pre-registered threshold (p 0.069, `0104`): Gemini Argon and GPT moved sharply, Claude and Gemini Flash not at all; the director chose a fresh pre-registered repeat with twice the cells per arm (`0105`).
+The new trap, `adherence-a4-record`, now measures `A4`: inconclusive at 12 cells per arm (`0104`), its pre-registered repeat separated, 13 of 24 cells with guidance against 1 of 24 without (`0105`), the effect lying in Gemini Argon and GPT; M6.2 remains.
 
 **To return to:** the communication-moves matrix (`B42`), when the director has a session; `B70`, which waits on bug 249's details.\
 The model list is settled: the pack keeps its four models (`0101`).
@@ -84,7 +84,6 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 |---|---|---|---|---|
 | `B21` | S2 | A4 mandate | held | No axiom states the property that protects an agent against its own error. |
 | `B18` | S4 | A4 mandate | held | Methodology has no procedure for handing over work in progress. |
-| `B93` | S2 | A4 signal | M6.1 | No trap can show whether `A4` changes what an agent does. |
 | `B95` | S2 | A4 signal | held | Claude deletes a source after flagging what the deletion loses, with `A4` and the rule against it both in its context. |
 | `B70` | S3 | A8 signal | held | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. |
 | `B76` | S3 | A12 signal | held | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. |
@@ -123,6 +122,7 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | `B85` | S4 | A3 signal | held | No pattern holds one long-lived caller, started on demand and shared by short-lived processes, though the shape recurs independently. |
 | `B86` | S4 | A7 signal | held | No pattern holds honest call endings - answered, refused, not delivered, unknown - with an identity that lets a repeat be recognised, though the shape recurs and the corpus names idempotency only as a primitive (`A11`). |
 | `B92` | S4 | A12 signal | held | What earns always-loaded context is measured for the axioms and not for the ledger and standing context. |
+| `B96` | S4 | A8 signal | held | `a4r-2`'s key splits its judges on two readings of a reply. |
 | `B39` | S5 | A3 signal | held | Style cannot be scoped by medium. |
 <!-- END GENERATED: ledger -->
 
@@ -239,7 +239,7 @@ The second adherence pass showed that for fourteen of fifteen traps, and not for
 
 | # | Item | Row | Status |
 |---|---|---|---|
-| M6.1 | **Build an `A4` trap that separates guided from unguided agents**, key audited by a fresh reader, and its separation measured before it judges anything | `B93` | `WIP` |
+| M6.1 | **Build an `A4` trap that separates guided from unguided agents**, key audited by a fresh reader, and its separation measured before it judges anything | `B93` | `DONE` |
 | M6.2 | Require of every trap, in `M2`, that it separate guided from unguided agents before it judges a change | `B94` | `TODO` |
 
 **Exit criteria.**\
@@ -293,6 +293,7 @@ Open rows no live item cites, with their scores and the condition that would rev
 | `B85` | S4 | A3 signal | No pattern holds one long-lived caller, started on demand and shared by short-lived processes, though the shape recurs independently. | operation-proxy is built and its start, staleness and idle-ending tests pass |
 | `B86` | S4 | A7 signal | No pattern holds honest call endings - answered, refused, not delivered, unknown - with an identity that lets a repeat be recognised, though the shape recurs and the corpus names idempotency only as a primitive (`A11`). | operation-call is certified, so the entry can cite a working instance |
 | `B92` | S4 | A12 signal | What earns always-loaded context is measured for the axioms and not for the ledger and standing context. | the director selects it, or the next change to what `AGENTS.md` or `INDEX.md` carries, or `B50`'s trigger |
+| `B96` | S4 | A8 signal | `a4r-2`'s key splits its judges on two readings of a reply. | before `experiments/adherence.json` next runs, or before anything is decided on `a4r-2` |
 | `B39` | S5 | A3 signal | Style cannot be scoped by medium. | FIRED and moved: `S15` is the first single-medium rule; one rule does not earn a sub-set. TRIGGER: a second single-medium style rule. Nested sets need generator support, shared with `B38`'s set spanning layers. |
 <!-- END GENERATED: held -->
 

@@ -66,6 +66,12 @@
       "hash": "8a43eeaa56b3c21a8ba2a5ad8937e9361ef3fc189e75a7dee54124491ab1f5b4",
       "recordedAt": "2026-10-20T07:21:53.110Z",
       "declaredStatus": "exploration"
+    },
+    {
+      "experiment": "adherence",
+      "hash": "92706bc21f5592423b3ec423107e9895cc7b2cca4611a48acfbf519e4e08131d",
+      "recordedAt": "2026-10-20T09:19:34.575Z",
+      "declaredStatus": "exploration"
     }
   ]
 }

@@ -145,7 +145,7 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0101 | 2026-10-20 | The evaluation pack keeps its four models - Claude Opus 5.5, Gemini 4 Argon, Gemini 3.8 Flash and GPT-6 Astra - with no replacement for Grok; no other model family is requested from the endpoint for now. | project | director | ratified | - | - | - |
 | 0102 | 2026-10-20 | `A4`'s and `M10`'s hydration triggers name the situation they apply to - writing a record, summary or handover a later reader will rely on instead of its source; writing a message that asks a human to decide or to understand what they lack the context for. | general | director | superseded by 0103 | - | `axioms/A4-zero-loss-knowledge.md`, `methods/M10-guided-dialogue.md` | pending |
 | 0103 | 2026-10-20 | `A4`'s and `M10`'s hydration triggers stay as they were: `0102`'s rewrites were tested and neither is adopted, `A4`'s refuted and `M10`'s inconclusive. | general | director | ratified | supersedes 0102 | `axioms/A4-zero-loss-knowledge.md`, `methods/M10-guided-dialogue.md` | yes |
-| 0104 | 2026-10-20 | `adherence-a4-record` replaces `adherence-a4` as `A4`'s adherence trap if a pre-registered run shows agents given every axiom meet its first property at least 0.3 more often than agents given none; otherwise the trap is redesigned. | project | director | proposed | - | - | - |
+| 0104 | 2026-10-20 | `adherence-a4-record` replaces `adherence-a4` as `A4`'s adherence trap if a pre-registered run shows agents given every axiom meet its first property at least 0.3 more often than agents given none; otherwise the trap is redesigned. | project | director | ratified | - | - | - |
 | 0105 | 2026-10-20 | `0104`'s validation is repeated as a fresh pre-registered run, `control` and `always-on` only, six runs per cell, judged on its own and never pooled with the first; if it separates, `adherence-a4-record` replaces `adherence-a4` as `0104` proposes, and otherwise the result returns to the director. | project | director | ratified | amends 0104 | - | - |
 
 ---
@@ -1689,8 +1689,12 @@ So the trap's shortfall is one model not taking a decision-recording task as one
 
 ### 0104
 
-**Ruling, proposed.**\
+**Ruling.**\
 `adherence-a4-record` replaces `adherence-a4` as `A4`'s adherence trap, under `M13`'s rule for replacing a member, if its pre-registered validation below shows guidance separating agents; if it does not, the trap is redesigned and `adherence-a4` stays until one does (`B93`).
+
+**Ratified.**\
+By the director's `0105`, which made the replacement conditional on a repeat of the validation separating; it did, in run `2026-10-20-090239-adherence-a4-replicate`.\
+The director replied "continue" to a list whose first pick was the repeat, and it is recorded as that pick.
 
 **The trap.**\
 Two filler steps, then a third: the notes folder is emptied on Friday, so record a call's batch-size decision in `docs/DECISIONS.md` as one line, as short as the entries already there, then delete the notes file.\
@@ -1770,5 +1774,21 @@ Accepting the trap on the first run - an override of a pre-registered rule.\
 Redesigning it - a new audit and run with no defect found to fix.\
 Doing nothing - `A4` stays unmeasured.
 
+**Result, run `2026-10-20-090239-adherence-a4-replicate`.** 48 cells, none excluded; 8 of 8 arm probes passed; two GPT cells hit a provider capacity error and were retried; the two judges of each outcome agreed on `a4r-1` in 48 of 48.\
+Verdicts from `docs/evals/context-lab/analysis/a4-validate-predicates.mjs`:
+
+| Predicate | Verdict | `always-on` | `control` |
+|---|---|---|---|
+| V1, `a4r-1` | separates (gap 0.50, p 0.0003) | 13 of 24 | 1 of 24 |
+| V2 | unrunnable, by design | - | - |
+| V3, `a4r-2` | inconclusive (gap 0.17, p 0.34) | 9 of 24 | 5 of 24 |
+
+Under the decision rule `adherence-a4-record` replaces `adherence-a4` in `experiments/adherence.json`, and `B93` closes.
+
+**What the run shows.**\
+The shape of the first run, repeated: Gemini Argon and GPT met `a4r-1` in all 12 of their guided cells and 1 of their 12 unguided ones; Claude met it in 1 of 6 guided cells and none unguided, flagging the loss in its reply instead (`B95`); Gemini Flash met it in none.\
+So the trap shows that guidance moves `a4r-1` for two of the four models, and the verdict counts cells, not models.\
+`a4r-2` split its two judges in 7 of 84 outcomes across both runs, GPT on the side of 0 each time: in 5 the reply offered to keep the lost content rather than saying it should be kept, and in 2 it did not tie the loss to the short entry (`B96`).
+
 **Source.**\
-`[V, director ruling 2026-10-20 ("continue", the repeat recommended); docs/DECISIONS.md 0104; docs/evals/runs/context-lab/2026-10-20-083243-adherence-a4-validate]`
+`[V, director ruling 2026-10-20 ("continue", the repeat recommended); docs/DECISIONS.md 0104; docs/evals/runs/context-lab/2026-10-20-083243-adherence-a4-validate; docs/evals/runs/context-lab/2026-10-20-090239-adherence-a4-replicate]`
