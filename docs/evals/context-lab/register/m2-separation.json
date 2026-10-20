@@ -1,0 +1,11 @@
+{
+  "experiment": "m2-separation",
+  "records": [
+    {
+      "experiment": "m2-separation",
+      "hash": "3f7d82b6d97453d275d52a535b3ce47bb059226f97f264878611efe576cfd27d",
+      "recordedAt": "2026-10-20T09:50:26.431Z",
+      "declaredStatus": "exploration"
+    }
+  ]
+}

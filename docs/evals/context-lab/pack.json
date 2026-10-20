@@ -87,6 +87,14 @@
       "canaries": [
         "The lantern on pier nine burns green."
       ]
+    },
+    {
+      "id": "corpus-m2-base",
+      "source": "mission-kit",
+      "revision": "1de4b10aabd9d26819512e5e94a4dd7261b5e978",
+      "canaries": [
+        "The lantern on pier nine burns green."
+      ]
     }
   ],
   "arms": [
@@ -343,6 +351,26 @@
           "as": "on-request"
         }
       ]
+    },
+    {
+      "id": "m2-base",
+      "deliver": [
+        {
+          "variant": "corpus-m2-base",
+          "file": "methods/M2-test-drive-docs-by-execution.md",
+          "as": "instruction"
+        }
+      ]
+    },
+    {
+      "id": "m2-head",
+      "deliver": [
+        {
+          "variant": "corpus",
+          "file": "methods/M2-test-drive-docs-by-execution.md",
+          "as": "instruction"
+        }
+      ]
     }
   ],
   "population": [
@@ -476,7 +504,8 @@
     "experiments/adherence-rule-repeat.json",
     "experiments/adherence-b88.json",
     "experiments/adherence-a4-validate.json",
-    "experiments/adherence-a4-replicate.json"
+    "experiments/adherence-a4-replicate.json",
+    "experiments/m2-separation.json"
   ],
   "suites": [
     {
@@ -670,6 +699,15 @@
         "allTags": [
           "adherence",
           "exercises:A4"
+        ]
+      }
+    },
+    {
+      "id": "m2-separation",
+      "experiment": "m2-separation",
+      "select": {
+        "allTags": [
+          "testdrive"
         ]
       }
     }

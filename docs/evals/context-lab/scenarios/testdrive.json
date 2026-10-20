@@ -1,0 +1,91 @@
+{
+  "id": "testdrive",
+  "tags": [
+    "testdrive",
+    "exercises:M2"
+  ],
+  "fixture": null,
+  "task": "Questions:\n\n### testdrive.Q1\nYou have built a trap: a task that shows whether an agent acts on a piece of guidance, scored by judges against a key that a fresh reader has already audited. You now want to use it to test whether rewording that guidance changes what agents do. Before the trap judges the rewording, what must you establish about the trap itself, how, and what follows if it fails?\n\n### testdrive.Q2\nAmong your probes is a control probe - one the old version of the document already answers well. In your run, readers holding no document at all answer it as well as readers holding either version. Should that probe count toward your verdict on the change? Why?\n\n### testdrive.Q3\nYou are testing an operator's install guide by running it. Its third command fails unless you add a flag the guide does not mention, and you know which flag to add. What do you do?\n\n### testdrive.Q4\nYou will test a revised definition with fresh readers. Put these steps in order, and say why the order matters: (a) fresh readers answer the probes; (b) you write the answer key; (c) a fresh reader audits the key against the documents and you correct it; (d) you write the probes; (e) you commit the key.\n\n### testdrive.Q5\nYou revised a charter and are scoring the readers' answers yourself. On one probe you cannot decide whether the readers of the old version or of the new version did better. How do you score that probe, and why?\n\n### testdrive.Q6\nAn evaluation of a document includes a step that is neither something run and observed, nor a check a script performs, nor a ruling by the person with final authority. How should you treat that step, and why?\n\nWrite your answers to this file, and nothing else:\n  {WORKSPACE}/answers.md\nPut each answer under its heading exactly as given above (a line starting with ###), and use no other headings inside an answer. End with a final heading `### OBSERVATIONS` noting anything ambiguous, inconsistent or wrong you met, or \"none\".\nWhen the file is written, reply with only the word DONE.",
+  "scoredFile": "answers.md",
+  "properties": [
+    {
+      "id": "Q1",
+      "type": "comprehension",
+      "decidedBy": "judge",
+      "key": "Establish that the trap can tell agents holding the guidance from agents holding none: agents given the guidance must do measurably better on it than agents given nothing. Check this in an earlier run's record if one exists; otherwise run agents given nothing on the same trap in the run that judges the rewording. A trap that does not separate them measures the agent, not the guidance, so it decides nothing about the rewording.",
+      "rubric": "2 if the answer names comparing agents given the guidance with agents given none (or no document) on the trap, requires those with it to do measurably better, and says a trap that fails this must not decide the question (it cannot show the rewording's effect). 1 if it names that comparison without saying a failing trap decides nothing, or names only a generic check of the trap's sensitivity (a pilot, a positive control, calibration) without comparing against agents given nothing. 0 for anything else, including only auditing the key or only comparing the old wording with the new.",
+      "scale": [
+        0,
+        2
+      ],
+      "answerHeading": "testdrive.Q1",
+      "question": "You have built a trap: a task that shows whether an agent acts on a piece of guidance, scored by judges against a key that a fresh reader has already audited. You now want to use it to test whether rewording that guidance changes what agents do. Before the trap judges the rewording, what must you establish about the trap itself, how, and what follows if it fails?"
+    },
+    {
+      "id": "Q2",
+      "type": "comprehension",
+      "decidedBy": "judge",
+      "key": "No. A probe that readers holding no document answer as well as readers holding the document cannot see the document: it measures the readers' own capability, so it can neither show an improvement nor catch damage, and it should decide nothing; being a control probe does not exempt it.",
+      "rubric": "2 for no, with the reason that a probe answered as well without the document cannot show the document's effect (it measures the reader, not the document), control probes included. 1 for no without that reason, or for doubting the probe with that reason without saying it should not count. 0 for yes, including keeping it because it is a control probe.",
+      "scale": [
+        0,
+        2
+      ],
+      "answerHeading": "testdrive.Q2",
+      "question": "Among your probes is a control probe - one the old version of the document already answers well. In your run, readers holding no document at all answer it as well as readers holding either version. Should that probe count toward your verdict on the change? Why?"
+    },
+    {
+      "id": "Q3",
+      "type": "comprehension",
+      "decidedBy": "judge",
+      "key": "Do not add the flag silently and carry on. The missing flag is a defect in the guide: stop at that step, record it as a finding, fix the guide, then resume from that step, running each command exactly as the guide gives it.",
+      "rubric": "2 if the answer stops at the step, records the missing flag as a defect in the guide, and fixes the guide before resuming. 1 if it records the defect but does not fix the guide and resume, or fixes the guide without treating the gap as a finding. 0 if it adds the flag and continues without recording it, or anything else.",
+      "scale": [
+        0,
+        2
+      ],
+      "answerHeading": "testdrive.Q3",
+      "question": "You are testing an operator's install guide by running it. Its third command fails unless you add a flag the guide does not mention, and you know which flag to add. What do you do?"
+    },
+    {
+      "id": "Q4",
+      "type": "comprehension",
+      "decidedBy": "judge",
+      "key": "d, b, e, c, a: write the probes, then the key, commit the key before anyone reads the document so the order is provable, have a fresh reader audit and correct the key, and only then have readers answer. A key written after seeing answers grades toward the result its author wants, and an unaudited key yields a confident wrong result.",
+      "rubric": "2 for the order d, b, e, c, a with at least one of these reasons: a key written after the answers grades toward the wanted result; the commit proves the order; an unaudited key gives a confident wrong result. 1 for that order without a reason, or for an order that keeps d and b before a and c before a but misplaces e, with a reason. 0 for any order with the key written, or audited, after readers answer.",
+      "scale": [
+        0,
+        2
+      ],
+      "answerHeading": "testdrive.Q4",
+      "question": "You will test a revised definition with fresh readers. Put these steps in order, and say why the order matters: (a) fresh readers answer the probes; (b) you write the answer key; (c) a fresh reader audits the key against the documents and you correct it; (d) you write the probes; (e) you commit the key."
+    },
+    {
+      "id": "Q5",
+      "type": "comprehension",
+      "decidedBy": "judge",
+      "key": "As a win for the original, the old version: when the scorer authored the change, ties go to the original, because the scorer's bias runs toward the change, so the correction must run the other way.",
+      "rubric": "2 for scoring it in favour of the old version with the reason that the author-scorer's bias runs toward the change. 1 for favouring the old version without that reason. 0 for a tie scored even, for the new version, or anything else.",
+      "scale": [
+        0,
+        2
+      ],
+      "answerHeading": "testdrive.Q5",
+      "question": "You revised a charter and are scoring the readers' answers yourself. On one probe you cannot decide whether the readers of the old version or of the new version did better. How do you score that probe, and why?"
+    },
+    {
+      "id": "Q6",
+      "type": "comprehension",
+      "decidedBy": "judge",
+      "key": "As the author's opinion presented as a finding, and the first step to distrust: an evaluation of documents is itself a document, and the regress of evaluating it stops only at execution (something run and observed), mechanism (a script's check) or authority (the director's ratification); a step resting on none of these settles nothing.",
+      "rubric": "2 if the answer treats the step as opinion rather than evidence and the first to distrust, with the reason that only execution, mechanism or final authority can end an evaluation's regress. 1 for distrusting the step, or calling it opinion, without that reason. 0 otherwise.",
+      "scale": [
+        0,
+        2
+      ],
+      "answerHeading": "testdrive.Q6",
+      "question": "An evaluation of a document includes a step that is neither something run and observed, nor a check a script performs, nor a ruling by the person with final authority. How should you treat that step, and why?"
+    }
+  ],
+  "notes": "Tests a change to M2 (0106, B94): rule 4 requires a probe to separate readers holding the document from readers holding none before it judges a change. Q1 and Q2 probe that concern; Q3 to Q6 are controls the old version answers. Probes and key written before any reader saw either version; arms give each reader only the document, or nothing, as M2 rules 4 and 5 ask."
+}

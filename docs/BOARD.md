@@ -43,7 +43,8 @@ M6  make every trap able to show its guidance    WIP  <- HERE
 **All five milestones are done.**\
 Since M4 closed: every axiom has an adherence trap (`B73`); the second adherence pass rewrote `A3`'s and `A14`'s hydration triggers and added the rule that a shortcut instruction does not suspend a binding rule (`0098`), confirmed by a pre-registered repeat (`B89`); Grok left the evaluation pack (`0100`), and `aa-gate`'s thresholds were re-derived for the four-model design (`B90`).\
 Testing a rewrite of `A4`'s trigger (`0103`) showed that `A4`'s trap cannot show whether `A4` works, the only trap of fifteen its guidance does not move; M6 builds one that can, and makes that a check every trap must pass.\
-The new trap, `adherence-a4-record`, now measures `A4`: inconclusive at 12 cells per arm (`0104`), its pre-registered repeat separated, 13 of 24 cells with guidance against 1 of 24 without (`0105`), the effect lying in Gemini Argon and GPT; M6.2 remains.
+The new trap, `adherence-a4-record`, now measures `A4`: inconclusive at 12 cells per arm (`0104`), its pre-registered repeat separated, 13 of 24 cells with guidance against 1 of 24 without (`0105`), the effect lying in Gemini Argon and GPT.\
+M6.2's change to `M2` is drafted on a local branch and its test pre-registered (`0106`).
 
 **To return to:** the communication-moves matrix (`B42`), when the director has a session; `B70`, which waits on bug 249's details.\
 The model list is settled: the pack keeps its four models (`0101`).
@@ -240,7 +241,7 @@ The second adherence pass showed that for fourteen of fifteen traps, and not for
 | # | Item | Row | Status |
 |---|---|---|---|
 | M6.1 | **Build an `A4` trap that separates guided from unguided agents**, key audited by a fresh reader, and its separation measured before it judges anything | `B93` | `DONE` |
-| M6.2 | Require of every trap, in `M2`, that it separate guided from unguided agents before it judges a change | `B94` | `TODO` |
+| M6.2 | Require of every trap, in `M2`, that it separate guided from unguided agents before it judges a change | `B94` | `WIP` |
 
 **Exit criteria.**\
 `A4` has a trap on which guided agents score measurably above unguided ones, and `M2` requires that of every trap before it judges a change.
