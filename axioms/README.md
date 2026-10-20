@@ -195,7 +195,7 @@ Axioms carry this shape rather than the `S`/`M`/`P`/`K` skeleton because an axio
 | [A1](A1-sovereign-state-transparency.md) | Sovereign State Transparency | stateful | You cannot see the current state of the system from one place and are about to infer it |
 | [A2](A2-isomorphic-specification.md) | Isomorphic Specification | declarative | Declared intent and running reality have drifted, or you are about to change one without the other |
 | [A3](A3-sovereign-composition.md) | Sovereign Composition | any-system | You are about to have one module reach past another's declared interface into its internals, or are deciding whether a concern belongs behind a new boundary or an existing one |
-| [A4](A4-zero-loss-knowledge.md) | Zero-Loss Knowledge | any-system | You are about to summarise an artifact rather than carry it forward whole |
+| [A4](A4-zero-loss-knowledge.md) | Zero-Loss Knowledge | any-system | You are about to write a record, summary or handover from a source, which a later reader will rely on instead of the original |
 | [A5](A5-perceptual-parity.md) | Perceptual Parity | multi-agent, llm-in-the-loop | An agent is about to act on state it derived rather than state it was given |
 | [A6](A6-frictionless-agentic-collaboration.md) | Frictionless Agentic Collaboration | multi-agent | You are designing a seam between two agents that must collaborate without a human relay |
 | [A7](A7-resilient-agentic-operations.md) | Resilient Agentic Operations | multi-agent, autonomous | You are deciding how the system should behave when a unit of work fails or a thread stalls |

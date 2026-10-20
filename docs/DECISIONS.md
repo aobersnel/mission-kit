@@ -143,6 +143,7 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0099 | 2026-10-18 | The adherence experiments (`adherence`, `adherence-pass2`) are judged by Claude, Gemini Argon and GPT; the Grok judge is dropped from them, having alone differed in 72 of the 97 split votes it was in on the second pass, against 8 to 15 for each other judge. | project | director | ratified | - | - | - |
 | 0100 | 2026-10-18 | Grok (`x`, `grok-4.20-non-reasoning`) is dropped from mission-kit's evaluation pack: from its population, and from every experiment as agent and as judge; the model list is reconsidered separately. | project | director | ratified | amends 0099 | - | - |
 | 0101 | 2026-10-20 | The evaluation pack keeps its four models - Claude Opus 5.5, Gemini 4 Argon, Gemini 3.8 Flash and GPT-6 Astra - with no replacement for Grok; no other model family is requested from the endpoint for now. | project | director | ratified | - | - | - |
+| 0102 | 2026-10-20 | `A4`'s and `M10`'s hydration triggers name the situation they apply to - writing a record, summary or handover a later reader will rely on instead of its source; writing a message that asks a human to decide or to understand what they lack the context for. | general | director | proposed | - | `axioms/A4-zero-loss-knowledge.md`, `methods/M10-guided-dialogue.md` | pending |
 
 ---
 
@@ -1616,3 +1617,35 @@ The director chose the first option of a list whose recommendation was it togeth
 
 **Source.**\
 `[V, director ruling 2026-10-20 ("continue, option 1 only for now"); docs/BACKLOG.md B91]`
+
+### 0102
+
+**Ruling, proposed.**\
+Two hydration triggers change, under `M13`'s rule for modifying a member, and land only after a pre-registered run tests them against the corpus before them:
+
+| Entry | Old | New | Reason |
+|---|---|---|---|
+| `A4` | You are about to summarise an artifact rather than carry it forward whole | You are about to write a record, summary or handover from a source, which a later reader will rely on instead of the original | The old trigger presumes the agent has already chosen to summarise, the choice the axiom governs, and an agent recording a decision from notes does not take itself to be summarising; agents opened `A4` in 15 of 40 cells of its trap across both passes (`B88`). |
+| `M10` | You need a human with limited context to understand something or decide something | You are about to write a message that asks a human to decide something, or to understand something they lack the context for | The old trigger states a need, which an agent writing a message on someone's behalf may not take as its own; agents opened `M10` in 3 of 5 cells of the message trap in both arms of Pass 2. |
+
+Each new trigger names the situation and not what to do in it, so it cannot carry a trap's answer.
+
+**Test, pre-registered before the run.**\
+Experiment `adherence-b88`: four scenarios - `adherence-a4` and `adherence-x`, which exercise `A4` and `M10`, and `adherence-a11` and `adherence-a2`, which exercise neither - with keys and judge instructions unchanged, population `c`, `a`, `f`, `o`, three runs per cell, judges `c`, `a`, `o`, and two arms: `on-trigger-b88-base`, on-trigger on the corpus at `c39033e7a5552eda0c0f314cd903572c5b200551`, and `on-trigger`, on the corpus with this change.\
+Verdicts are computed by `docs/evals/context-lab/analysis/b88-predicates.mjs`, committed with this row:
+
+- **R1 - `A4` routing.** Cells of `adherence-a4` that open `A4`. Holds if the new corpus is at least 0.25 higher with two-sided Fisher exact p below 0.05; refuted if it is not higher.
+- **R2 - `M10` routing.** Cells of `adherence-x` that open `M10`, by R1's rule.
+- **R3 - effect.** `adherence-a4`'s three properties met, over every valid cell; holds if at least 0.10 higher with p below 0.05; refuted if not higher.
+- **R4 - guard.** Cells of `adherence-a11` and `adherence-a2` that open `A4` or `M10`; holds if that share rises by at most 0.20, refuted otherwise.
+- **R5 - descriptive.** `M10` opened on `adherence-a4`, per-member routing, `adherence-x`'s properties, and input tokens per cell.
+
+**Decision rule.**\
+A trigger lands if its routing predicate holds and R4 holds; it is reverted if its routing predicate or R4 is refuted; otherwise it goes to the director with its numbers.\
+R3 is reported, and decides nothing alone.
+
+**Expected power, stated in advance.**\
+At 12 cells per arm, R1 and R2 hold only on a large gain: from Pass 2's rates of about 0.4 and 0.6, to roughly 0.8 or more.
+
+**Source.**\
+`[V, director selection 2026-10-20 ("continue"), B88; docs/evals/runs/context-lab/2026-10-18-093310-adherence-pass2 hydration]`

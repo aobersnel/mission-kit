@@ -36,7 +36,7 @@ This file described them a second time and the copy had already drifted, naming 
 | [A1](axioms/A1-sovereign-state-transparency.md) | Sovereign State Transparency | You cannot see the current state of the system from one place and are about to infer it |
 | [A2](axioms/A2-isomorphic-specification.md) | Isomorphic Specification | Declared intent and running reality have drifted, or you are about to change one without the other |
 | [A3](axioms/A3-sovereign-composition.md) | Sovereign Composition | You are about to have one module reach past another's declared interface into its internals, or are deciding whether a concern belongs behind a new boundary or an existing one |
-| [A4](axioms/A4-zero-loss-knowledge.md) | Zero-Loss Knowledge | You are about to summarise an artifact rather than carry it forward whole |
+| [A4](axioms/A4-zero-loss-knowledge.md) | Zero-Loss Knowledge | You are about to write a record, summary or handover from a source, which a later reader will rely on instead of the original |
 | [A5](axioms/A5-perceptual-parity.md) | Perceptual Parity | An agent is about to act on state it derived rather than state it was given |
 | [A6](axioms/A6-frictionless-agentic-collaboration.md) | Frictionless Agentic Collaboration | You are designing a seam between two agents that must collaborate without a human relay |
 | [A7](axioms/A7-resilient-agentic-operations.md) | Resilient Agentic Operations | You are deciding how the system should behave when a unit of work fails or a thread stalls |
@@ -121,7 +121,7 @@ This file described them a second time and the copy had already drifted, naming 
 | [M7](methods/M7-axiom-alignment-audit.md) | Axiom alignment audit - required gate for extensive planning/design | You are about to implement a design that changes shared procedure, governance, coordination or anything other agents will rely on |
 | [M8](methods/M8-artifact-bootstrap.md) | Artifact bootstrap - enter the loop at its inlet, one ratified type at a time | You are adopting the artifact document set in a project that does not use it yet |
 | [M9](methods/M9-history-content-scrub.md) | History content scrub | You must remove content from history that is already committed |
-| [M10](methods/M10-guided-dialogue.md) | Guided dialogue - lead a human to understanding, then to a recorded decision | You need a human with limited context to understand something or decide something |
+| [M10](methods/M10-guided-dialogue.md) | Guided dialogue - lead a human to understanding, then to a recorded decision | You are about to write a message that asks a human to decide something, or to understand something they lack the context for |
 | [M11](methods/M11-change-a-charter.md) | Change a charter - account for every changed sentence, test before ratifying | You are about to change a charter's text, its vision, its scope or its growth policy |
 | [M12](methods/M12-investigate-a-set.md) | Investigate a set - partition the population against its charter and find the gaps | You need to know whether a set is complete, balanced or lopsided against its charter, or where its gaps are |
 | [M13](methods/M13-change-a-set.md) | Change a set's membership - admit, modify, retire or rebalance a member | You are about to add an entry to a set, substantively change one, retire one, or split, merge or replace members |

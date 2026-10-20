@@ -68,6 +68,6 @@ Messages between agents are not in scope.
 <!-- BEGIN GENERATED: entries. Run tools/generate-index.mjs; do not edit by hand. -->
 | ID | Title | Hydrate when |
 |---|---|---|
-| [M10](../methods/M10-guided-dialogue.md) | Guided dialogue - lead a human to understanding, then to a recorded decision | You need a human with limited context to understand something or decide something |
+| [M10](../methods/M10-guided-dialogue.md) | Guided dialogue - lead a human to understanding, then to a recorded decision | You are about to write a message that asks a human to decide something, or to understand something they lack the context for |
 | [S15](../style/S15-message-to-a-human.md) | A message to a human - point first, one step, explained names, clear picks | You are about to write a message a human will read without the context you have |
 <!-- END GENERATED -->

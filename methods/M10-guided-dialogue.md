@@ -3,7 +3,7 @@ id: M10
 category: method
 title: Guided dialogue - lead a human to understanding, then to a recorded decision
 status: active
-hydrate-when: You need a human with limited context to understand something or decide something
+hydrate-when: You are about to write a message that asks a human to decide something, or to understand something they lack the context for
 supersedes: []
 related: [S15, ST1, W24, W23, AR4, A13, A12, A5, A4, A8, A3]
 ---
