@@ -60,6 +60,12 @@
       "hash": "0306bfa1eb2b82351801d076a9712d26f5008d9ad7097dbdd2b5769f217bc9f7",
       "recordedAt": "2026-10-19T21:21:54.477Z",
       "declaredStatus": "exploration"
+    },
+    {
+      "experiment": "adherence",
+      "hash": "8a43eeaa56b3c21a8ba2a5ad8937e9361ef3fc189e75a7dee54124491ab1f5b4",
+      "recordedAt": "2026-10-20T07:21:53.110Z",
+      "declaredStatus": "exploration"
     }
   ]
 }

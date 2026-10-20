@@ -79,6 +79,14 @@
       "canaries": [
         "The lantern on pier nine burns green."
       ]
+    },
+    {
+      "id": "corpus-b88-base",
+      "source": "mission-kit",
+      "revision": "c39033e7a5552eda0c0f314cd903572c5b200551",
+      "canaries": [
+        "The lantern on pier nine burns green."
+      ]
     }
   ],
   "arms": [
@@ -315,6 +323,26 @@
           "as": "on-request"
         }
       ]
+    },
+    {
+      "id": "on-trigger-b88-base",
+      "deliver": [
+        {
+          "variant": "corpus-b88-base",
+          "file": "AGENTS.md",
+          "as": "folder-file"
+        },
+        {
+          "variant": "corpus-b88-base",
+          "file": "INDEX.md",
+          "as": "instruction"
+        },
+        {
+          "variant": "corpus-b88-base",
+          "file": ".",
+          "as": "on-request"
+        }
+      ]
     }
   ],
   "population": [
@@ -396,7 +424,8 @@
           "on-trigger-base",
           "c2-base",
           "c2-head",
-          "on-trigger-pass1"
+          "on-trigger-pass1",
+          "on-trigger-b88-base"
         ]
       },
       {
@@ -410,7 +439,8 @@
           "on-trigger-base",
           "c2-base",
           "c2-head",
-          "on-trigger-pass1"
+          "on-trigger-pass1",
+          "on-trigger-b88-base"
         ]
       },
       {
@@ -443,7 +473,8 @@
     "experiments/c0.json",
     "experiments/c2.json",
     "experiments/adherence-pass2.json",
-    "experiments/adherence-rule-repeat.json"
+    "experiments/adherence-rule-repeat.json",
+    "experiments/adherence-b88.json"
   ],
   "suites": [
     {
@@ -602,6 +633,21 @@
           "exercises:A10",
           "exercises:A11",
           "exercises:A12"
+        ]
+      }
+    },
+    {
+      "id": "adherence-b88",
+      "experiment": "adherence-b88",
+      "select": {
+        "allTags": [
+          "adherence"
+        ],
+        "anyTags": [
+          "exercises:A4",
+          "exercises:M10",
+          "exercises:A11",
+          "exercises:A2"
         ]
       }
     }
