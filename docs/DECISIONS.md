@@ -1647,5 +1647,23 @@ R3 is reported, and decides nothing alone.
 **Expected power, stated in advance.**\
 At 12 cells per arm, R1 and R2 hold only on a large gain: from Pass 2's rates of about 0.4 and 0.6, to roughly 0.8 or more.
 
+**Result, run `2026-10-20-072254-adherence-b88`.** 96 cells, none excluded; 8 of 8 arm probes passed.\
+Verdicts from `docs/evals/context-lab/analysis/b88-predicates.mjs`:
+
+| Predicate | Verdict | New triggers | Old triggers |
+|---|---|---|---|
+| R1, `A4` opened on `adherence-a4` | refuted | 5 of 12 | 6 of 12 |
+| R2, `M10` opened on `adherence-x` | inconclusive | 10 of 12 | 8 of 12 (chance 0.64) |
+| R3, `adherence-a4`'s properties met | refuted, unchanged | 27 of 36 | 27 of 36 |
+| R4, `A4` or `M10` opened where neither applies | holds | 4 of 24 | 3 of 24 |
+
+Under the decision rule, `A4`'s rewrite is reverted.\
+`M10`'s goes to the director: R2 is inconclusive and R4 holds.
+
+**What the run shows about `A4`'s trap.**\
+The score is set by the model, under either trigger: Gemini Argon and GPT opened `A4` and met all three properties; Claude never opened it and met all three; Gemini Flash never opened it and met none, in all six of its cells.\
+On that trap neither Claude nor Gemini Flash read anything from the corpus in any cell, though `INDEX.md`, with every trigger, was in their context; on `adherence-x` the same Gemini Flash read `S15` and `M10` in every cell.\
+So the trap's shortfall is one model not taking a decision-recording task as one where guidance applies, which the trigger's wording did not change; `B88` is revised to say so.
+
 **Source.**\
 `[V, director selection 2026-10-20 ("continue"), B88; docs/evals/runs/context-lab/2026-10-18-093310-adherence-pass2 hydration]`

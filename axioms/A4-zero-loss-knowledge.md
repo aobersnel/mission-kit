@@ -3,7 +3,7 @@ id: A4
 category: axiom
 title: Zero-Loss Knowledge
 status: active
-hydrate-when: You are about to write a record, summary or handover from a source, which a later reader will rely on instead of the original
+hydrate-when: You are about to summarise an artifact rather than carry it forward whole
 applies-to: [any-system]
 related: [A12]
 ---
