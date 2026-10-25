@@ -145,6 +145,9 @@ No member can state them, so they are a set property.\
 A charter's probes are derived from its population - from what members actually do - and never from the text of its latest revision, or they can only confirm that revision.\
 Weakening a probe is a change to the charter's standard and is as visible in review as weakening a claim.
 
+Where the investigator running [`M12`](../methods/M12-investigate-a-set.md) sits across a trust or credential boundary from the runtime substrate that executes the set's members, self-reported execution summaries cannot serve as probes.\
+The charter then specifies a **two-key cross-trust-boundary probe**: (1) an immutable raw platform audit-log export anchored by platform-minted event IDs and timestamps, (2) a deterministic cross-consistency script verifying bijective identity across audit logs, state snapshots, and member receipts, and (3) a post-hoc challenge-response query against random audit-log entries.
+
 ### Free - everything else
 
 A charter's remaining sections are its own.\

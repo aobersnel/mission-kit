@@ -21,7 +21,7 @@ It produces a partition, the place of each member in it, and the gaps; the chart
 4. **Test each gap.** Search the corpus for a member, or guidance elsewhere, that already fills it, and name the searches run. A gap that survives is real; a candidate that would fill it is named where one exists.
 5. **Show a gap or argue there is none.** A partition that names at least one checked absence has shown it can detect one; one that names none must say why the population is complete against it.
 6. **Check the balance** against the growth policy: a crowded cell beside empty ones is a finding.
-7. **Record it in the project's own record**, dated, citing the charter it measured against. The charter does not link to it.
+7. **Record it in the project's own record**, dated, citing the charter (or both charters in a cross-set `M_A x M_B` join) it measured against. Where the investigation probes runtime execution across a trust boundary, attach the three-part two-key verification receipt (raw platform audit-log export, deterministic cross-consistency script verdict, and post-hoc challenge-response probe). The charter does not link to it.
 8. **Carry each gap to the backlog** ([`AR5`](../artifacts/AR5-backlog.md)) as a row with a revival trigger; the board ([`AR3`](../artifacts/AR3-board.md)) weighs them for the director.
 9. **If the vision, scope or growth policy is itself shown wrong,** propose a re-aim under [`M11`](M11-change-a-charter.md); a finding about members - overlap, crowding, a candidate - is acted on by [`M13`](M13-change-a-set.md).
 
