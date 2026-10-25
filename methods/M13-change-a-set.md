@@ -23,9 +23,9 @@ This method is the first; [`M12`](M12-investigate-a-set.md) analyses the populat
 4. Give it the frontmatter [`SC1`](../schemas/SC1-catalog-entry.md) requires, a hydration trigger that states a condition ([`S14`](../style/S14-hydration-triggers-state-a-condition.md)), and the body sections its category declares in [`SC6`](../schemas/SC6-entry-body.md), if any.
 5. Regenerate the index and pass the gate.
 
-**Modify a member.**
+**Modify or promote a member across fidelity tiers.**
 
-1. An edit in place keeps the id.
+1. An edit in place keeps the id. Where a set's charter stratifies members by fidelity tier (`E4`), promoting a member from a bootstrap tier (`Stage-0` stand-in) to a higher fidelity tier (`Stage-1` full functional stand-in or native substrate) is an in-place modification under the same member id: update the member's declared fidelity tier, widen its `CLAIM_ALLOWED` ceiling only for the planes newly validated, and retain earlier stage discoveries in its record.
 2. A change that would alter what a reader decides is tested before it lands, by [`M2`](M2-test-drive-docs-by-execution.md), with the previous version as the comparison.
 3. Changing the id inside the file retires the old id; that is a replacement, below, not an edit.
 4. Regenerate the index if the title or trigger changed, and pass the gate.
