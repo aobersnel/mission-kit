@@ -43,6 +43,11 @@ A collection is items in one place.\
 A set is a collection with a charter, which means it can be asked a question a collection cannot answer: *is anything missing?*\
 Without a stated end state and scope a gap is invisible, so an uncharted population can be audited for validity and never for completeness; an investigation against them is what finds the gap.
 
+**Internal partition completeness against relational coverage completeness (`Set A x Set B`).**\
+A set's completeness is measured either *internally* - by partitioning its own population along axes drawn from its own scope - or *relationally*, where Set B (`L0` validation topologies, test suites, controls) exists to cover the members of Set A (`F0` architectural flows, requirements, failure modes).\
+In a relational join (`M_A x M_B`), Set A supplies the denominator: an uncovered row in `M_A` is a coverage gap in Set B, and an unallocated or malformed row in `M_A` surfaces as a dual-set hygiene fault in Set A.\
+Neither charter hardcodes the join matrix in its own `Territory`, because the join changes whenever either population moves; the charter of Set B declares that its composition is relational over Set A, and a dated [`M12`](../methods/M12-investigate-a-set.md) investigation holds the `M_A x M_B` matrix citing both charters.
+
 **Set against category.**\
 `category` is the member-side declaration of set membership - the value an entry writes to name the population that governs it.\
 The set is the population; the category is the member's claim about it.\
