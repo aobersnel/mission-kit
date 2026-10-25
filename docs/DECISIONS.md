@@ -148,7 +148,8 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0104 | 2026-10-20 | `adherence-a4-record` replaces `adherence-a4` as `A4`'s adherence trap if a pre-registered run shows agents given every axiom meet its first property at least 0.3 more often than agents given none; otherwise the trap is redesigned. | project | director | ratified | - | - | - |
 | 0105 | 2026-10-20 | `0104`'s validation is repeated as a fresh pre-registered run, `control` and `always-on` only, six runs per cell, judged on its own and never pooled with the first; if it separates, `adherence-a4-record` replaces `adherence-a4` as `0104` proposes, and otherwise the result returns to the director. | project | director | ratified | amends 0104 | - | - |
 | 0106 | 2026-10-20 | `M2` requires that a probe, a trap included, judge a change only if it separates readers holding the document from readers holding none, checked in an earlier record where one exists and otherwise in the run that judges the change. | general | director | superseded by 0107 | - | `methods/M2-test-drive-docs-by-execution.md` | pending |
-| 0107 | 2026-10-20 | `M2` requires that a probe, a trap included, judge a change only if readers holding either version score differently on it from readers holding nothing, by a margin stated before the run, judged on what readers decide; a probe that does not separate counts for nothing in a change's favour and still counts against it. | general | director | proposed | supersedes 0106 | `methods/M2-test-drive-docs-by-execution.md` | pending |
+| 0107 | 2026-10-20 | `M2` requires that a probe, a trap included, judge a change only if readers holding either version score differently on it from readers holding nothing, by a margin stated before the run, judged on what readers decide; a probe that does not separate counts for nothing in a change's favour and still counts against it. | general | director | ratified | supersedes 0106 | `methods/M2-test-drive-docs-by-execution.md` | yes |
+| 0108 | 2026-10-26 | `M2` rule 4 reads "readers holding either version, or both", so that one version differing from readers holding nothing is enough for a probe to separate. | general | director | ratified | amends 0107 | `methods/M2-test-drive-docs-by-execution.md` | yes |
 
 ---
 
@@ -1846,9 +1847,14 @@ The first row of the table above says `B88` spent 96 cells on a trap; its test s
 
 ### 0107
 
-**Ruling, proposed.**\
+**Ruling.**\
 `M2` gains a rule for reasoning documents, as its rule 4, under `M13`'s rule for modifying a member, and its reasoning example adds readers given nothing (`B94`, M6.2).\
 It supersedes `0106`, whose wording an audit refuted before any reader ran, and lands only after the pre-registered test below; until then it is held on the local branch `m6-2-separation`, at `c35db76b45e616318357bcd6375a2acce0e8780d`.
+
+**Ratified.**\
+The director ratified this ruling on 2026-10-26 by authority, not on its test, which could not see the change (below): option 1 of the list put to the director, which was also the recommendation, with the clause "either version" amended by `0108`.\
+`M2`'s *Why this terminates* names ratification by the director as the stop for a judgement neither execution nor mechanism can settle.\
+The tested text is `M2` at `c35db76b45e616318357bcd6375a2acce0e8780d`, a commit on a local branch; the branch was rebased onto `main` before landing, and the same text, identical by `git diff` of the file, landed as `ecbe98c4d07e8f3b127ff8dcd2486eb443fe1487`.
 
 **Each changed sentence.**
 
@@ -1935,7 +1941,25 @@ Fifteen readers across both versions found rule 1 unclear on whether the key's a
 **Closeout hooks.**\
 Both revisions held as pinned; S reported for every probe with its direction above.\
 `Q2` under the old version against nothing, 12 of 12 each: the old version's readers did not treat a control probe as exempt, so the reason given for "Control probes need this as much as the rest" is not supported by this run (banner above).\
-The citation search at landing is still to run.
+At landing the audit's searches were run again - `git grep -nE "\brules? [4-9]\b"`, `M2` within fifteen characters of a rule number in either order, and each renumbered rule's opening words outside `M2` - and every hit cites the new numbers.
 
 **Source.**\
 `[V, director selection 2026-10-20 ("continue", M6.2); docs/audits/M6.2-m2-separation-axiom-audit.md; docs/audits/M6.2-testdrive-key-audit.md; docs/BACKLOG.md B94; docs/DECISIONS.md 0103 and 0106; docs/evals/runs/context-lab/2026-10-20-102650-m2-separation]`
+
+### 0108
+
+**Ruling.**\
+In `M2` rule 4, "Readers holding either version must score differently on it from readers holding nothing" reads "Readers holding either version, or both, must score differently on it from readers holding nothing".
+
+**Why.**\
+Two of twelve readers of `0107`'s text in run `2026-10-20-102650-m2-separation` found "either" ambiguous between at least one version and both; the test's own predicate counted a probe as separating when at least one version differed, and the clause now says so.
+
+**Alternatives refuted.**\
+"At least one version" - the same reading in more words.\
+Leaving it - the ambiguity two readers found would land with the rule.
+
+**Named costs.**\
+The clause is untested; it narrows a reading the test already used and changes no answer the test scored.
+
+**Source.**\
+`[V, director ruling 2026-10-26 ("continue with option 1"); docs/evals/runs/context-lab/2026-10-20-102650-m2-separation cells testdrive.m2-head.a.2 and testdrive.m2-head.c.3 OBSERVATIONS]`

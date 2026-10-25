@@ -49,7 +49,7 @@ Its job is to change what a reader can decide, so it is tested by giving fresh r
    They are what lets the test fail the new version: a change that improves
    three answers and damages two is not an improvement.
 4. **Let a probe judge a change only if it can tell readers holding the document from readers holding none.**
-   Readers holding either version must score differently on it from readers holding nothing - better or worse - by a margin stated before the run; a probe that capable readers pass, or fail, whatever they hold measures the reader, not the document, and cannot show an improvement.
+   Readers holding either version, or both, must score differently on it from readers holding nothing - better or worse - by a margin stated before the run; a probe that capable readers pass, or fail, whatever they hold measures the reader, not the document, and cannot show an improvement.
    Check this in an earlier run's record before spending a new run, where that record already gave the same probe to readers holding the content it tests and to readers holding nothing; otherwise give readers holding nothing the same probes in the run that judges the change.
    A probe that does not separate them counts for nothing in the change's favour, and still counts against it if readers of the new version do worse on it than readers of the old.
    Judge separation on what readers decide, not on whether they cite the document, which readers holding nothing cannot do.

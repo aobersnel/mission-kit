@@ -37,14 +37,15 @@ M2  hold what we prescribe                       DONE
 M3  make composition real                        DONE
 M4  conventions and enforcement                  DONE
 M5  bring the charters to E4                     DONE
-M6  make every trap able to show its guidance    WIP  <- HERE
+M6  make every trap able to show its guidance    DONE
+next: none selected
 ```
 
-**All five milestones are done.**\
+**All six milestones are done.**\
 Since M4 closed: every axiom has an adherence trap (`B73`); the second adherence pass rewrote `A3`'s and `A14`'s hydration triggers and added the rule that a shortcut instruction does not suspend a binding rule (`0098`), confirmed by a pre-registered repeat (`B89`); Grok left the evaluation pack (`0100`), and `aa-gate`'s thresholds were re-derived for the four-model design (`B90`).\
 Testing a rewrite of `A4`'s trigger (`0103`) showed that `A4`'s trap cannot show whether `A4` works, the only trap of fifteen its guidance does not move; M6 builds one that can, and makes that a check every trap must pass.\
 The new trap, `adherence-a4-record`, now measures `A4`: inconclusive at 12 cells per arm (`0104`), its pre-registered repeat separated, 13 of 24 cells with guidance against 1 of 24 without (`0105`), the effect lying in Gemini Argon and GPT.\
-M6.2's change to `M2` is held on a local branch: a fresh audit refuted its first wording before any reader ran (`0106`), and the revised wording's test could not see the change, since readers holding nothing gave its answers unaided, while every control held (`0107`); ratifying it is the director's.
+`M2` now requires that every probe and trap separate readers holding the document from readers holding none before it judges a change: a fresh audit refuted the first wording before any reader ran (`0106`), the revised wording's test could not see the change, since readers holding nothing gave its answers unaided, and the director ratified it by authority, with one clause clarified (`0107`, `0108`).
 
 **To return to:** the communication-moves matrix (`B42`), when the director has a session; `B70`, which waits on bug 249's details.\
 The model list is settled: the pack keeps its four models (`0101`).
@@ -89,7 +90,6 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | `B98` | S2 | A4 signal | held | `M2` rule 1 does not say whether a key's audit must come before readers answer. |
 | `B70` | S3 | A8 signal | held | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. |
 | `B76` | S3 | A12 signal | held | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. |
-| `B94` | S3 | A8 signal | M6.2 | A trap judges a change before anyone checks it can show an effect. |
 | `B97` | S3 | A11 signal | held | Whether a probe separates readers holding the document from readers holding none is computed by hand. |
 | `B12` | S4 | A14 signal | held | The recovery methodology for a brownfield vision is unwritten and its reasoning is untested. |
 | `B19` | S4 | A14 signal | held | Methodology has nothing proportionate for a small design decision. |
@@ -235,7 +235,7 @@ The charter checker tests fixed headings by name and free concerns by declared l
 
 ---
 
-## M6 - make every trap able to show its guidance - `WIP`
+## M6 - make every trap able to show its guidance - `DONE`
 
 A trap measures an axiom only if agents given the guidance behave differently from agents without it.\
 The second adherence pass showed that for fourteen of fifteen traps, and not for `A4`'s.
@@ -243,7 +243,7 @@ The second adherence pass showed that for fourteen of fifteen traps, and not for
 | # | Item | Row | Status |
 |---|---|---|---|
 | M6.1 | **Build an `A4` trap that separates guided from unguided agents**, key audited by a fresh reader, and its separation measured before it judges anything | `B93` | `DONE` |
-| M6.2 | Require of every trap, in `M2`, that it separate guided from unguided agents before it judges a change | `B94` | `WIP` |
+| M6.2 | Require of every trap, in `M2`, that it separate guided from unguided agents before it judges a change | `B94` | `DONE` - `M2` rule 4 |
 
 **Exit criteria.**\
 `A4` has a trap on which guided agents score measurably above unguided ones, and `M2` requires that of every trap before it judges a change.
@@ -308,13 +308,5 @@ Open rows no live item cites, with their scores and the condition that would rev
 
 A decision is entered here when a move cannot proceed without a director ruling, naming what it blocks; once ruled it moves to [`DECISIONS.md`](DECISIONS.md) and leaves this list.
 
-**Rule on `0107`: whether `M2` takes the separation rule its test could not see.**\
-It blocks M6.2: the target probes did not separate, since readers holding nothing gave the rule's answers unaided; every control held under the new version; nine of twelve old-version readers wrote that the old text does not say it.
-
-| Move | Cost |
-|---|---|
-| Ratify by authority, with "either version" made "either version, or both" | One clause two readers found ambiguous, untested; ratification rests on authority, not the test, which `M2`'s *Why this terminates* allows |
-| Ratify by authority as tested | Nothing now; the ambiguity two readers found lands with it |
-| Test it on behaviour: a trap in which agents design a test of reworded guidance | A new trap, two audits and about 36 to 48 cells; capable agents may include readers holding nothing unaided, as these readers did |
-| Do nothing | `M2` keeps no such rule and M6.2 stays open |
+None open.
 
