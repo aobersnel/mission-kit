@@ -1863,6 +1863,9 @@ It supersedes `0106`, whose wording an audit refuted before any reader ran, and 
 | A trap - a task that shows whether an agent acts on guidance, not what it can answer - is held to this rule too. | The defect it answers was in a trap; "held to this rule" rather than `0106`'s "a probe in this sense", which would extend rules 5 to 9 to traps. |
 | Example: three fresh readers get the old charter, three the new and three nothing, blind; the controls score identically on both versions, and above the readers given nothing. | An author working from the example, as `PC1` directs, would otherwise skip the rule. |
 
+**Correction, after the run.**\
+The reason given for "Control probes need this as much as the rest" - that without it rule 3 reads as an exemption - was what the audit's third closeout hook asked this run to measure, and the run does not support it: on `Q2`, readers of the old version met the probe as often as readers holding nothing, 12 of 12 each.
+
 Rules 4 to 8 become 5 to 9; nothing outside `M2` cites those numbers, searched by the audit and again at landing.
 
 **Audit.**\
@@ -1905,5 +1908,34 @@ Doing nothing - `B88`'s spend recurs.
 
 **Named costs.** 36 cells, each holding one short document or none.
 
+**Result, run `2026-10-20-102650-m2-separation`.** 36 cells, none excluded, no answer absent; 12 of 12 arm probes passed; `run.json` records the two versions at the pinned `1de4b10aabd9d26819512e5e94a4dd7261b5e978` and `c35db76b45e616318357bcd6375a2acce0e8780d`.\
+Verdicts from `docs/evals/context-lab/analysis/m2-separation-predicates.mjs`, cells meeting each probe of 12:
+
+| Probe | `control` | `m2-base` | `m2-head` | S |
+|---|---|---|---|---|
+| `Q1`, target | 10 | 9 | 12 | does not separate |
+| `Q2`, target | 12 | 12 | 12 | does not separate |
+| `Q3`, control | 3 | 12 | 12 | separates |
+| `Q4`, control | 0 | 12 | 12 | separates |
+| `Q5`, control | 0 | 12 | 12 | separates |
+| `Q6`, control | 0 | 8 | 8 | separates |
+
+T is unrunnable: readers holding nothing gave the new rule's answers unaided, so neither target probe can show the change, the risk stated in advance.\
+G holds: 44 of 48 on the four control probes under both versions, and no probe fell.\
+Under the decision rule the result goes to the director with the numbers.
+
+**What the readers said.**\
+Read after the verdicts, which the closeout hooks asked to read after them, since the predicates script printed both at once.\
+Nine of the twelve old-version readers - every one but Gemini Flash's three, which reported nothing - wrote that the old `M2` does not ask for readers holding nothing, and that they had inferred it.\
+Gemini Flash met `Q1` in none of its 3 cells holding the old version, 3 of 3 holding the new, and 2 of 3 holding nothing: given the old text, it answered from "compare old against new" alone.\
+Two new-version readers found the rule's "readers holding either version" ambiguous between at least one version and both.\
+Six new-version readers noted that `Q2` gives no margin, which the new rule requires; all six still met it.\
+Fifteen readers across both versions found rule 1 unclear on whether the key's audit must come before readers answer or only before scoring, and whether the corrected key is committed again (`B98`).
+
+**Closeout hooks.**\
+Both revisions held as pinned; S reported for every probe with its direction above.\
+`Q2` under the old version against nothing, 12 of 12 each: the old version's readers did not treat a control probe as exempt, so the reason given for "Control probes need this as much as the rest" is not supported by this run (banner above).\
+The citation search at landing is still to run.
+
 **Source.**\
-`[V, director selection 2026-10-20 ("continue", M6.2); docs/audits/M6.2-m2-separation-axiom-audit.md; docs/audits/M6.2-testdrive-key-audit.md; docs/BACKLOG.md B94; docs/DECISIONS.md 0103 and 0106]`
+`[V, director selection 2026-10-20 ("continue", M6.2); docs/audits/M6.2-m2-separation-axiom-audit.md; docs/audits/M6.2-testdrive-key-audit.md; docs/BACKLOG.md B94; docs/DECISIONS.md 0103 and 0106; docs/evals/runs/context-lab/2026-10-20-102650-m2-separation]`

@@ -44,7 +44,7 @@ M6  make every trap able to show its guidance    WIP  <- HERE
 Since M4 closed: every axiom has an adherence trap (`B73`); the second adherence pass rewrote `A3`'s and `A14`'s hydration triggers and added the rule that a shortcut instruction does not suspend a binding rule (`0098`), confirmed by a pre-registered repeat (`B89`); Grok left the evaluation pack (`0100`), and `aa-gate`'s thresholds were re-derived for the four-model design (`B90`).\
 Testing a rewrite of `A4`'s trigger (`0103`) showed that `A4`'s trap cannot show whether `A4` works, the only trap of fifteen its guidance does not move; M6 builds one that can, and makes that a check every trap must pass.\
 The new trap, `adherence-a4-record`, now measures `A4`: inconclusive at 12 cells per arm (`0104`), its pre-registered repeat separated, 13 of 24 cells with guidance against 1 of 24 without (`0105`), the effect lying in Gemini Argon and GPT.\
-M6.2's change to `M2` is held on a local branch: a fresh audit refuted its first wording before any reader ran (`0106`), and the revised wording's test is pre-registered (`0107`).
+M6.2's change to `M2` is held on a local branch: a fresh audit refuted its first wording before any reader ran (`0106`), and the revised wording's test could not see the change, since readers holding nothing gave its answers unaided, while every control held (`0107`); ratifying it is the director's.
 
 **To return to:** the communication-moves matrix (`B42`), when the director has a session; `B70`, which waits on bug 249's details.\
 The model list is settled: the pack keeps its four models (`0101`).
@@ -86,6 +86,7 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | `B21` | S2 | A4 mandate | held | No axiom states the property that protects an agent against its own error. |
 | `B18` | S4 | A4 mandate | held | Methodology has no procedure for handing over work in progress. |
 | `B95` | S2 | A4 signal | held | Claude deletes a source after flagging what the deletion loses, with `A4` and the rule against it both in its context. |
+| `B98` | S2 | A4 signal | held | `M2` rule 1 does not say whether a key's audit must come before readers answer. |
 | `B70` | S3 | A8 signal | held | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. |
 | `B76` | S3 | A12 signal | held | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. |
 | `B94` | S3 | A8 signal | M6.2 | A trap judges a change before anyone checks it can show an effect. |
@@ -259,6 +260,7 @@ Open rows no live item cites, with their scores and the condition that would rev
 | `B21` | S2 | A4 mandate | No axiom states the property that protects an agent against its own error. | a lone agent ships a claim it corroborated itself and was wrong, or the axiom set is next audited. Whether this is a new axiom or a property an existing one should state - `A8`'s gating and `A4`'s zero-loss are the nearest - is a question for the set. |
 | `B18` | S4 | A4 mandate | Methodology has no procedure for handing over work in progress. | a handover loses information that a procedure would have preserved, or `M5` converts `M0` and the gap becomes a stated thinness. |
 | `B95` | S2 | A4 signal | Claude deletes a source after flagging what the deletion loses, with `A4` and the rule against it both in its context. | `A4`'s trap is settled under `0104`, or `A4` or `AGENTS.md` section 5.5 is next changed |
+| `B98` | S2 | A4 signal | `M2` rule 1 does not say whether a key's audit must come before readers answer. | `M2` is next changed, or the next key is audited |
 | `B70` | S3 | A8 signal | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. | either is documented, or a gate is refused on the distinction. |
 | `B76` | S3 | A12 signal | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. | .f.5` and `adherence-a13.on-trigger-b.f.9` at the time limit after 22 and 19 tool calls, 9 and 6 of them corpus reads; `adherence-a13.on-trigger-b.a.2` with no message after 22 seconds); whether that repeats the pattern - same model family, trap and arm, but no fetching storm - is for triage |
 | `B97` | S3 | A11 signal | Whether a probe separates readers holding the document from readers holding none is computed by hand. | `0107` is ratified, or the next evaluation through `tools/eval.mjs` |
@@ -306,5 +308,13 @@ Open rows no live item cites, with their scores and the condition that would rev
 
 A decision is entered here when a move cannot proceed without a director ruling, naming what it blocks; once ruled it moves to [`DECISIONS.md`](DECISIONS.md) and leaves this list.
 
-None open.
+**Rule on `0107`: whether `M2` takes the separation rule its test could not see.**\
+It blocks M6.2: the target probes did not separate, since readers holding nothing gave the rule's answers unaided; every control held under the new version; nine of twelve old-version readers wrote that the old text does not say it.
+
+| Move | Cost |
+|---|---|
+| Ratify by authority, with "either version" made "either version, or both" | One clause two readers found ambiguous, untested; ratification rests on authority, not the test, which `M2`'s *Why this terminates* allows |
+| Ratify by authority as tested | Nothing now; the ambiguity two readers found lands with it |
+| Test it on behaviour: a trap in which agents design a test of reworded guidance | A new trap, two audits and about 36 to 48 cells; capable agents may include readers holding nothing unaided, as these readers did |
+| Do nothing | `M2` keeps no such rule and M6.2 stays open |
 
