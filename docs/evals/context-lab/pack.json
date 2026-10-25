@@ -99,7 +99,7 @@
     {
       "id": "corpus-m2-head",
       "source": "mission-kit",
-      "revision": "c35db76b45e616318357bcd6375a2acce0e8780d",
+      "revision": "ecbe98c4d07e8f3b127ff8dcd2486eb443fe1487",
       "canaries": [
         "The lantern on pier nine burns green."
       ]
