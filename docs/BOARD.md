@@ -86,14 +86,17 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 | Row | Impact | Principle | Planned in | Finding |
 |---|---|---|---|---|
 | `B99` | S1 | A4 signal | M7.3 | `E4` says every inter-set relation is a boundary, and the corpus contradicts it. |
+| `B102` | S1 | A2 signal | held | `SC1` says the reverse view of a work-type's `methods` is generated, and nothing generates it. |
+| `B103` | S1 | A4 signal | held | `SC1`'s `retired` status keeps the id "so citations resolve", against the rule that a retired entry is deleted. |
 | `B21` | S2 | A4 mandate | held | No axiom states the property that protects an agent against its own error. |
 | `B18` | S4 | A4 mandate | held | Methodology has no procedure for handing over work in progress. |
 | `B95` | S2 | A4 signal | held | Claude deletes a source after flagging what the deletion loses, with `A4` and the rule against it both in its context. |
 | `B98` | S2 | A4 signal | held | `M2` rule 1 does not say whether a key's audit must come before readers answer. |
-| `B100` | S2 | A14 signal | M7.2 | No entry states completeness against another set's population, and `M12` cannot run such an investigation. |
+| `B100` | S2 | A14 signal | M7.3 | No entry states completeness against another set's population, and `M12` cannot run such an investigation. |
 | `B70` | S3 | A8 signal | held | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. |
 | `B76` | S3 | A12 signal | held | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. |
 | `B97` | S3 | A11 signal | held | Whether a probe separates readers holding the document from readers holding none is computed by hand. |
+| `B104` | S3 | A2 signal | held | A set charter carries headings `E4` says every charter fixes, and nothing checks it. |
 | `B12` | S4 | A14 signal | held | The recovery methodology for a brownfield vision is unwritten and its reasoning is untested. |
 | `B19` | S4 | A14 signal | held | Methodology has nothing proportionate for a small design decision. |
 | `B22` | S4 | A9 signal | held | `A9` binds every system unconditionally and is the least exercised axiom in the corpus. |
@@ -262,7 +265,7 @@ The requester is asked for nothing: mission-kit triages the proposal, has the tr
 | # | Item | Row | Status |
 |---|---|---|---|
 | M7.1 | **Triage the proposal into concepts and have a fresh reader attack the triage** | `B100` | `DONE` - `docs/audits/PR16-absorption-triage.md` |
-| M7.2 | Pre-register and run one `context-lab` test of the absorptions and the verdicts of "already covered" | `B100` | `WIP` |
+| M7.2 | Pre-register and run one `context-lab` test of the absorptions and the verdicts of "already covered" | `B100` | `DONE` - `0113` result |
 | M7.3 | Word and land the absorptions, each by its own ruling, correct `E4`'s claim about inter-set relations, and close the pull request with a note of what was absorbed | `B99`, `B100` | `TODO` |
 
 **Exit criteria.**\
@@ -277,6 +280,8 @@ Open rows no live item cites, with their scores and the condition that would rev
 <!-- BEGIN GENERATED: held. Run tools/check-board.mjs --write; do not edit by hand. -->
 | Row | Impact | Principle | Finding | Revival trigger |
 |---|---|---|---|---|
+| `B102` | S1 | A2 signal | `SC1` says the reverse view of a work-type's `methods` is generated, and nothing generates it. | the next change to `tools/generate-index.mjs`, or the next investigation of the methods or work-types set |
+| `B103` | S1 | A4 signal | `SC1`'s `retired` status keeps the id "so citations resolve", against the rule that a retired entry is deleted. | the next retirement of an entry, or the next change to `SC1` |
 | `B21` | S2 | A4 mandate | No axiom states the property that protects an agent against its own error. | a lone agent ships a claim it corroborated itself and was wrong, or the axiom set is next audited. Whether this is a new axiom or a property an existing one should state - `A8`'s gating and `A4`'s zero-loss are the nearest - is a question for the set. |
 | `B18` | S4 | A4 mandate | Methodology has no procedure for handing over work in progress. | a handover loses information that a procedure would have preserved, or `M5` converts `M0` and the gap becomes a stated thinness. |
 | `B95` | S2 | A4 signal | Claude deletes a source after flagging what the deletion loses, with `A4` and the rule against it both in its context. | `A4`'s trap is settled under `0104`, or `A4` or `AGENTS.md` section 5.5 is next changed |
@@ -284,6 +289,7 @@ Open rows no live item cites, with their scores and the condition that would rev
 | `B70` | S3 | A8 signal | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. | either is documented, or a gate is refused on the distinction. |
 | `B76` | S3 | A12 signal | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. | .f.5` and `adherence-a13.on-trigger-b.f.9` at the time limit after 22 and 19 tool calls, 9 and 6 of them corpus reads; `adherence-a13.on-trigger-b.a.2` with no message after 22 seconds); whether that repeats the pattern - same model family, trap and arm, but no fetching storm - is for triage |
 | `B97` | S3 | A11 signal | Whether a probe separates readers holding the document from readers holding none is computed by hand. | `0107` is ratified, or the next evaluation through `tools/eval.mjs` |
+| `B104` | S3 | A2 signal | A set charter carries headings `E4` says every charter fixes, and nothing checks it. | `ST1` or `SC6` is next changed |
 | `B12` | S4 | A14 signal | The recovery methodology for a brownfield vision is unwritten and its reasoning is untested. | the first external brownfield adopter reports back. Waiting is deliberate - their run is the only evidence available and costs nothing. |
 | `B19` | S4 | A14 signal | Methodology has nothing proportionate for a small design decision. | a small design decision fails in a way an anchoring check would have caught. |
 | `B22` | S4 | A9 signal | `A9` binds every system unconditionally and is the least exercised axiom in the corpus. | a deployment fails in a way chaos validation would have caught, or `A9` is cited as the reason a change was refused. |
@@ -329,5 +335,13 @@ Open rows no live item cites, with their scores and the condition that would rev
 
 A decision is entered here when a move cannot proceed without a director ruling, naming what it blocks; once ruled it moves to [`DECISIONS.md`](DECISIONS.md) and leaves this list.
 
-None open.
+**Rule on `0112`, `0113` and `0114`: the absorptions from pull request 16.**\
+It blocks M7.3: the test sent all three to the director for ratification - `Q1` 12, 6 and 12 of 12 for nothing, the current corpus and the revised one; `Q2` 8, 10 and 12; `Q3` 6, 9 and 12 - and two readers found the revised `E8` unsettled against `E7` on no verdict or fail.
+
+| Move | Cost |
+|---|---|
+| Ratify all three, with `E8`'s last clause saying that at a gate an account the judge cannot check is no verdict and the work waits (`E7`) | One clause, untested, settling what two readers found open |
+| Ratify all three as tested | Nothing now; the open point lands with it |
+| Ratify `0112` and `0113`; revise and retest `0114` | Another run of about 36 cells |
+| Do nothing | The false sentence stays in `E4`, and pull request 16 stays open |
 

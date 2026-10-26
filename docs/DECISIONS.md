@@ -2132,8 +2132,44 @@ At 12 cells per arm a single probe holds only on a large gap: `m7-base` at 3 of 
 
 **Named costs.** 36 cells, 24 of them reading the corpus on request, at roughly 310,000 input tokens each by the adherence runs' on-request means, and likely more for eight questions.
 
+**Result, run `2026-10-26-005243-absorb16`.** 36 cells, none excluded, no answer absent; 12 of 12 arm probes passed; `run.json` records the two corpora at the pinned revisions.\
+The readers' observations were read before the verdicts this time.\
+Cells meeting each probe, of 12:
+
+| Probe | `control` | `m7-base` | `m7-head` | S |
+|---|---|---|---|---|
+| `Q1`, investigating a covering set (`0113`) | 12 | 6 | 12 | separates, downward on `m7-base` |
+| `Q2`, relations other than boundaries (`0112`) | 8 | 10 | 12 | separates |
+| `Q3`, a party's own report (`0114`) | 6 | 9 | 12 | separates |
+| `Q4`, keeping an id; tiers as kinds | 12 | 12 | 12 | does not separate |
+| `Q5`, what a stand-in supports | 12 | 12 | 12 | does not separate |
+| `Q6`, keeping what was found | 10 | 12 | 12 | does not separate |
+| `Q7`, where a coverage view is kept | 10 | 11 | 12 | does not separate |
+| `Q8`, the partition misfit test | 12 | 12 | 12 | does not separate |
+
+T holds: on `Q1` and `Q3` pooled, 24 of 24 under `m7-head` against 15 of 24 under `m7-base`, gap 0.38, p 0.0016; `Q1` alone 12 against 6 (p 0.014), `Q3` alone 12 against 9 (p 0.22).\
+G holds: no probe fell, and `Q8` did not separate, so its bound was not used.\
+V: all four probes on the concepts the triage judged already covered read *covered by general practice* - readers holding nothing met them as often as readers of the corpus - so those verdicts stand, and no absorption is owed for them, `C2c` included.\
+Under the decision rule `0112`, `0113` and `0114` each go to the director for ratification.
+
+**What the run shows.**\
+`Q1` is the clearest case of `M2` rule 4's downward branch: readers holding nothing met it in every cell, readers of the current `M12` in half - its misfit test led them to treat a check covering three requirements as a broken partition - and readers of the revised `M12` in every cell.\
+So `0113` mostly repairs harm the current text does, rather than teaching what readers lacked.\
+`Q2` did not separate downward as predicted: instead every Claude, Gemini Argon and GPT reader of the current corpus, nine of nine, wrote in their observations that `E4`'s sentence about inter-set relations is false or overgeneralised, the defect `B99` records, found unprompted.\
+`Q3`'s rise from 9 to 12 is not significant alone; four readers of the current corpus wrote that `E8`'s *The author's evidence* reads two ways, which `0114` addresses.\
+Tool inputs in 23 of 24 corpus cells named `E4`, `M12` and `E8`; the remaining cell, `m7-head`'s third Claude cell, named none and met every probe.
+
+**What the readers found besides.**\
+Two readers of the revised `E8` found it unsettled against `E7` whether an account the judge cannot check gives no verdict or a fail; `E7` makes no verdict an invalid run and a fail a valid run that finds the condition false, and the new sentence says only "does not pass".\
+One reader of the revised `M12` found "may sit in several" easy to miss beside "exactly one place" in the same step.\
+Defects outside the change, read by the author against the files and filed: `SC1` says the reverse view of a work-type's `methods` is generated, and `tools/generate-index.mjs` generates none (`B102`); `SC1`'s `retired` status keeps the id "so citations resolve", against the rule that a retired entry is deleted with no stub (`B103`); `ST1`, a set charter, carries `Purpose` and no `Operation` though `E4` gives every charter fixed headings, and `SC6` checks layer charters only (`B104`).
+
+**Disclosed.**\
+This ruling said the hydration table would report who opened the changed entries; it cannot, since the probes declare no guidance, and the figure above is read from tool inputs instead.\
+The cost estimate was low: the corpus arms averaged about 780,000 and 680,000 input tokens per cell, more than twice the estimate, the costliest cell 1,964,301.
+
 **Source.**\
-`[V, director selection 2026-10-26 ("continue", M7); docs/audits/PR16-absorption-triage.md C1a, C1b, C1c, C1f; docs/audits/M7-absorb16-audit.md; docs/BACKLOG.md B100]`
+`[V, director selection 2026-10-26 ("continue", M7); docs/audits/PR16-absorption-triage.md C1a, C1b, C1c, C1f; docs/audits/M7-absorb16-audit.md; docs/BACKLOG.md B100; docs/evals/runs/context-lab/2026-10-26-005243-absorb16]`
 
 ### 0114
 
