@@ -207,3 +207,15 @@ Session `ses_e8a914e85ffeRs1sNr6QxuYP52`; verdict: triage holds with changes.\
 It turned no absorb into a reject and no reject into an absorb.\
 It found `C1b`'s rule overgeneralised, `C3a`'s wording ineffective, `C1d` resting on the wrong text, `C3b` in the wrong layer with the wrong revival trigger, three concepts missed (`C1f`, `C1g`, `C3e`), the proposal carried without its removed lines, two searches miscounted, and `C1a`'s evidence partly mis-chosen; all are applied above.\
 The author checked its central measured claims before applying them: the *Attachment* and *Binding* measures, `README.md`'s *Mechanics* and admission rules, the `L0`/`F0` count, the `W8`, `W11` and `M1` quotes, and the `zorg` clone's revision.
+
+---
+
+## Outcome
+
+Recorded after the fact, on 2026-10-26.
+
+The test, run `2026-10-26-005243-absorb16`, sent all three absorptions to the director, and every concept judged already covered read as covered by general practice - readers holding nothing met it as often as readers of the corpus.\
+The director ratified the absorptions with one clause added: `E4`'s correction (`0112`), `M12`'s reading of a set measured against another's members (`0113`), and `E8`'s *The party's own report* (`0114`), whose last clause says that at a gate an account the judge cannot check gives no verdict (`0115`).\
+They landed on `main` at `3393178`, and the pull request was closed with a note of what was taken and where; nothing was asked of the requester.\
+`C3b` stays parked as `B101`.
+

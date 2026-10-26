@@ -38,16 +38,17 @@ M3  make composition real                        DONE
 M4  conventions and enforcement                  DONE
 M5  bring the charters to E4                     DONE
 M6  make every trap able to show its guidance    DONE
-M7  absorb what pull request 16 proposes         WIP  <- HERE
+M7  absorb what pull request 16 proposes         DONE
+next: none selected
 ```
 
-**Six milestones are done; M7 absorbs what an outside proposal offers.**\
+**All seven milestones are done.**\
 Since M4 closed: every axiom has an adherence trap (`B73`); the second adherence pass rewrote `A3`'s and `A14`'s hydration triggers and added the rule that a shortcut instruction does not suspend a binding rule (`0098`), confirmed by a pre-registered repeat (`B89`); Grok left the evaluation pack (`0100`), and `aa-gate`'s thresholds were re-derived for the four-model design (`B90`).\
 Testing a rewrite of `A4`'s trigger (`0103`) showed that `A4`'s trap cannot show whether `A4` works, the only trap of fifteen its guidance does not move; M6 builds one that can, and makes that a check every trap must pass.\
 The new trap, `adherence-a4-record`, now measures `A4`: inconclusive at 12 cells per arm (`0104`), its pre-registered repeat separated, 13 of 24 cells with guidance against 1 of 24 without (`0105`), the effect lying in Gemini Argon and GPT.\
 `M2` now requires that every probe and trap separate readers holding the document from readers holding none before it judges a change: a fresh audit refuted the first wording before any reader ran (`0106`), the revised wording's test could not see the change, since readers holding nothing gave its answers unaided, and the director ratified it by authority, with one clause clarified (`0107`, `0108`).\
 Pull request #16 proposed three additions from another project; the director chose to absorb what fits in mission-kit's own words and ask nothing of the requester, and M7 triages it, tests the verdicts with `context-lab` and lands the absorptions (`docs/audits/PR16-absorption-triage.md`).\
-The test sent all three absorptions to the director, who ratified them with one clause added (`0112` to `0115`): `E4` no longer denies relations between sets other than boundaries, `M12` can investigate a set measured against another's members, and `E8` says what a party's own account shows.
+The test sent all three absorptions to the director, who ratified them with one clause added (`0112` to `0115`): `E4` no longer denies relations between sets other than boundaries, `M12` can investigate a set measured against another's members, and `E8` says what a party's own account shows; the pull request is closed with a note of what was taken and where.
 
 **To return to:** the communication-moves matrix (`B42`), when the director has a session; `B70`, which waits on bug 249's details.\
 The model list is settled: the pack keeps its four models (`0101`).
@@ -86,14 +87,12 @@ Every open row, scored on the row and ordered on the common scale; generated, ne
 <!-- BEGIN GENERATED: ledger. Run tools/check-board.mjs --write; do not edit by hand. -->
 | Row | Impact | Principle | Planned in | Finding |
 |---|---|---|---|---|
-| `B99` | S1 | A4 signal | M7.3 | `E4` says every inter-set relation is a boundary, and the corpus contradicts it. |
 | `B102` | S1 | A2 signal | held | `SC1` says the reverse view of a work-type's `methods` is generated, and nothing generates it. |
 | `B103` | S1 | A4 signal | held | `SC1`'s `retired` status keeps the id "so citations resolve", against the rule that a retired entry is deleted. |
 | `B21` | S2 | A4 mandate | held | No axiom states the property that protects an agent against its own error. |
 | `B18` | S4 | A4 mandate | held | Methodology has no procedure for handing over work in progress. |
 | `B95` | S2 | A4 signal | held | Claude deletes a source after flagging what the deletion loses, with `A4` and the rule against it both in its context. |
 | `B98` | S2 | A4 signal | held | `M2` rule 1 does not say whether a key's audit must come before readers answer. |
-| `B100` | S2 | A14 signal | M7.3 | No entry states completeness against another set's population, and `M12` cannot run such an investigation. |
 | `B105` | S2 | A4 signal | held | `E7`'s list of what makes a gate's run invalid does not name an account the judge cannot check. |
 | `B70` | S3 | A8 signal | held | `W22`, and three peers, declare `evidenceAuthority: verifier-attestation` while `W0` constraint 2 says verifier-held gates use plain `kind:review`. |
 | `B76` | S3 | A12 signal | held | With today's guidance, a Gemini agent can spend a whole task fetching ledger entries. |
@@ -259,7 +258,7 @@ The second adherence pass showed that for fourteen of fifteen traps, and not for
 
 ---
 
-## M7 - absorb what pull request 16 proposes - `WIP`
+## M7 - absorb what pull request 16 proposes - `DONE`
 
 An outside proposal is a source of lessons learned elsewhere, and the vision wants a lesson learned once, anywhere.\
 The requester is asked for nothing: mission-kit triages the proposal, has the triage attacked, tests its verdicts and words what fits itself.
@@ -268,7 +267,7 @@ The requester is asked for nothing: mission-kit triages the proposal, has the tr
 |---|---|---|---|
 | M7.1 | **Triage the proposal into concepts and have a fresh reader attack the triage** | `B100` | `DONE` - `docs/audits/PR16-absorption-triage.md` |
 | M7.2 | Pre-register and run one `context-lab` test of the absorptions and the verdicts of "already covered" | `B100` | `DONE` - `0113` result |
-| M7.3 | Word and land the absorptions, each by its own ruling, correct `E4`'s claim about inter-set relations, and close the pull request with a note of what was absorbed | `B99`, `B100` | `WIP` - landed; the pull request to close |
+| M7.3 | Word and land the absorptions, each by its own ruling, correct `E4`'s claim about inter-set relations, and close the pull request with a note of what was absorbed | `B99`, `B100` | `DONE` - `0112` to `0115`; pull request closed 2026-10-26 |
 
 **Exit criteria.**\
 Every concept in the proposal has a verdict with its evidence, what was absorbed is landed by ruling, and the pull request is closed with a note of what was taken and where.
