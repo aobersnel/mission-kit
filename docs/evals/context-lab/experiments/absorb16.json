@@ -33,5 +33,5 @@
       "o"
     ]
   },
-  "notes": "Test of M7's absorptions from pull request 16 (rulings 0109-0111) and of the triage's verdicts of already covered. Readers hold nothing (control), the corpus before the absorptions (m7-base, pinned), or the corpus with them (m7-head, pinned), each on request with the ledger as an instruction. Predicates pre-registered in 0110 and computed by analysis/absorb16-predicates.mjs. Exploration."
+  "notes": "Test of M7's absorptions from pull request 16 (rulings 0112-0114, superseding 0109-0111) and of the triage's verdicts of already covered. Readers hold nothing (control), the corpus before the absorptions (m7-base, pinned), or the corpus with them (m7-head, pinned), each on request with the ledger as an instruction and AGENTS.md as a folder file. Predicates pre-registered in 0113 and computed by analysis/absorb16-predicates.mjs. Exploration."
 }

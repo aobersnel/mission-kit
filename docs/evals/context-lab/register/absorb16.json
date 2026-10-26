@@ -6,6 +6,12 @@
       "hash": "dc65fd63f0271450251a6ce78b0136f29f5a67d2d552f59287fcd37e5fab57da",
       "recordedAt": "2026-10-26T00:23:21.800Z",
       "declaredStatus": "exploration"
+    },
+    {
+      "experiment": "absorb16",
+      "hash": "a93a1cbc886e04ff6809e9193d3de863449018a07956972f25cb6dff83bf3a10",
+      "recordedAt": "2026-10-26T00:51:51.085Z",
+      "declaredStatus": "exploration"
     }
   ]
 }

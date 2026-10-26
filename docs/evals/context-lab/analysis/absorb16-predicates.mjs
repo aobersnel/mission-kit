@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Test of M7's absorptions from pull request 16 (rulings 0109-0111) and of the triage's verdicts of
-// "already covered", pre-registered in 0110 before the run it judges. It applies M2 rule 4 to its own
+// Test of M7's absorptions from pull request 16 (rulings 0112-0114, superseding 0109-0111) and of the triage's verdicts of
+// "already covered", pre-registered in 0113 before the run it judges, and revised after its audit. It applies M2 rule 4 to its own
 // probes first: a probe that does not separate readers holding the corpus from readers holding none
 // counts for nothing in a change's favour, and still counts against it.
 //
@@ -16,7 +16,7 @@ const record = JSON.parse(fs.readFileSync(path.join(runDir, "run.json"), "utf8")
 
 // The two corpora must be the pinned ones, or the run compared nothing.
 const BASE_REV = "5671948ca354e3126f7b052a5c2964195f77c59e";
-const HEAD_REV = "f137df5043c0d139a0862c28e7ad4a21771e4846";
+const HEAD_REV = "546260355d8db6ef1823d79b1a58008efd215172";
 const rev = (id) => record.variants?.[id]?.revision;
 if (rev("corpus-m7-base") !== BASE_REV || rev("corpus-m7-head") !== HEAD_REV) {
 	console.log(`INVALID: variants held base ${rev("corpus-m7-base")} and head ${rev("corpus-m7-head")}, not the pinned ${BASE_REV} and ${HEAD_REV}`);
@@ -62,12 +62,14 @@ for (const q of ALL) {
 }
 const passing = (probes) => probes.filter((q) => separation[q].separates);
 
-// T - the absorptions: on the target probes that separate, pooled, head against base. Each target probe's
-// head-against-base figures are also given, since each absorption is ratified on its own.
+// T - the absorptions of 0113 and 0114: on Q1 and Q3, those that separate, pooled, head against base. Q2
+// tests 0112, which goes to the director whatever T shows, and is reported, not pooled. Each target
+// probe's head-against-base figures are also given, since each absorption is ratified on its own.
+const T_PROBES = ["Q1", "Q3"];
 const T = (() => {
-	const qs = passing(TARGET);
+	const qs = passing(T_PROBES);
 	const perProbe = Object.fromEntries(TARGET.map((q) => { const h = met("m7-head", [q]), b = met("m7-base", [q]); return [q, { head: frac(h), base: frac(b), gap: share(h) - share(b), p: fisher(h.met, h.of, b.met, b.of), separates: separation[q].separates }]; }));
-	if (!qs.length) return { id: "T", verdict: "UNRUNNABLE", probes: qs, perProbe, why: "no target probe separates readers holding a corpus from readers holding none" };
+	if (!qs.length) return { id: "T", verdict: "UNRUNNABLE", probes: qs, perProbe, why: "neither Q1 nor Q3 separates readers holding a corpus from readers holding none" };
 	const h = met("m7-head", qs), b = met("m7-base", qs), gap = share(h) - share(b), p = fisher(h.met, h.of, b.met, b.of);
 	return { id: "T", verdict: gap >= 0.25 - EPS && p < 0.05 ? "HOLDS" : gap <= EPS ? "REFUTED" : "INCONCLUSIVE", probes: qs, head: frac(h), base: frac(b), gap, p, perProbe };
 })();
@@ -79,7 +81,9 @@ const T = (() => {
 //   not covered                  base meets it in fewer than 9 of 12 - the verdict is reopened.
 const V = Object.fromEntries(COVERED.map((q) => {
 	const b = met("m7-base", [q]), c = met("control", [q]);
-	const verdict = b.of === 0 ? "UNRUNNABLE" : share(b) < 0.75 - EPS ? "NOT COVERED" : share(b) - share(c) >= 0.3 - EPS ? "COVERED, MEASURED" : "COVERED BY GENERAL PRACTICE";
+	// Counted out of 12: a cell without a value counts as not met, so a count of scored cells below 12 cannot
+	// reach the threshold by a share alone; with no control value the verdict cannot be read.
+	const verdict = b.of === 0 || c.of === 0 ? "UNRUNNABLE" : b.met < 9 ? "NOT COVERED" : b.met / 12 - share(c) >= 0.3 - EPS ? "COVERED, MEASURED" : "COVERED BY GENERAL PRACTICE";
 	return [q, { verdict, base: frac(b), control: frac(c) }];
 }));
 
@@ -92,9 +96,20 @@ const G = (() => {
 	return { id: "G", verdict: drop <= 0.1 + EPS && !fallen.length ? "HOLDS" : "REFUTED", fallen, guard, head: frac(h), base: frac(b), drop };
 })();
 
-const decision = G.verdict === "REFUTED" ? "revise the wording of the absorption a fallen probe tests, and return it to the director"
-	: T.verdict === "HOLDS" ? "the absorptions go to the director for ratification"
-	: "the absorptions go to the director with the numbers";
+// Per ruling. 0112 goes to the director whatever T shows. A fall on Q4 to Q7 tests no absorption, so it
+// holds all three until explained; a fall on Q1, Q2, Q3 or Q8 sends that probe's absorption back for
+// revision. Otherwise 0113 (Q1) and 0114 (Q3) go for ratification only if T holds and their own probe
+// separates and is higher on head; otherwise with the numbers.
+const OWN = { "0112": "Q2", "0113": "Q1", "0114": "Q3" };
+const FALL_RULING = { Q1: "0113", Q2: "0112", Q3: "0114", Q8: "0113" };
+const coveredFall = G.fallen.filter((q) => COVERED.includes(q));
+const decision = Object.fromEntries(Object.entries(OWN).map(([ruling, q]) => {
+	if (coveredFall.length) return [ruling, `returns to the director with the fall on ${coveredFall.join(", ")} named; not ratified until it is explained`];
+	if (G.fallen.some((f) => FALL_RULING[f] === ruling) || (ruling === "0113" && G.verdict === "REFUTED" && G.fallen.length === 0)) return [ruling, "revise its wording, and return it to the director"];
+	if (ruling === "0112") return [ruling, "to the director for ratification, whatever T shows; Q2 reported"];
+	const own = T.perProbe[q];
+	return [ruling, T.verdict === "HOLDS" && own.separates && own.gap > EPS ? "to the director for ratification" : "to the director with the numbers"];
+}));
 const mean = (a) => (a.length ? a.reduce((s, x) => s + x, 0) / a.length : null);
 const means = Object.fromEntries(ALL.map((q) => [q, Object.fromEntries(ARMS.map((a) => [a, mean(values(a, q))]))]));
 const byMember = {};
@@ -111,6 +126,6 @@ if (incomplete.length) console.log(`incomplete values, left out of every count: 
 for (const { id, verdict, ...rest } of [T, G]) console.log(`${id}  ${verdict}\n    ${JSON.stringify(rest)}`);
 console.log("V  verdicts of already covered:");
 for (const [q, v] of Object.entries(V)) console.log(`   ${q}  ${v.verdict}  base ${v.base}  control ${v.control}`);
-console.log(`decision: ${decision}`);
+for (const [ruling, d] of Object.entries(decision)) console.log(`decision ${ruling}: ${d}`);
 console.log(`means: ${JSON.stringify(means)}`);
 console.log(`target met per member and arm: ${JSON.stringify(byMember)}`);
