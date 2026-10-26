@@ -41,8 +41,8 @@ An author may offer evidence about their own work, and must: tests run, checks p
 It is evidence, and it never satisfies an independent-agent gate, because the judge of that gate must be someone who did not author the work.
 
 **The party's own report.**\
-Evidence produced by the party whose conduct is in question settles what that party reported.\
-It settles the conduct only where the judge can re-run the work, or check the report against a record the party could not have written; a judge who can do neither says so rather than passing it.
+A party's own account of what it did - its log, transcript or summary - shows what that party reported.\
+It shows that the thing was done only where the judge can observe the result, re-run the work, or check the account against a record the party could not have written; a judge who can do none of these records the claim as not shown, and does not pass it.
 
 **Measured or inferred.**\
 Evidence carries its provenance: whether it was measured or inferred is part of what is offered, and the standing context forbids presenting one as the other.

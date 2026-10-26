@@ -101,11 +101,11 @@ A charter may use any or all of them, and the strongest charters use all three.
 An exclusion without a route is half an answer: it tells the reader where not to put something and leaves them to guess where it belongs.\
 **Relations to other sets belong here when they are boundaries.**\
 A set defining itself against a neighbour is stating a boundary.\
-A set can also exist to cover another set's members - every procedure that conducts work cited by a work-type, every trait named by an axiom - and that relation is not a boundary: it is declared once, on the members of the side whose meaning includes it, with the reverse view generated ([`README.md`](../README.md), *Mechanics*).\
-A charter whose set covers another's says so in its scope; which members are covered is read from the declarations, never kept in the charter.
+A set can also be measured against another set's members - the work-types charter asks that every procedure that conducts work be cited by a work-type, the traits charter that every trait be named by an axiom - and that relation is not a boundary: it is declared once, on the members of the side whose meaning includes it, with the reverse view generated ([`README.md`](../README.md), *Mechanics*).\
+A charter that measures its set this way says so, in its vision or its scope; which members are covered is read from the declarations and never typed into the charter, though a view generated from them may appear in its index.
 
-> **Correction.** This entry previously said that a set defining itself against a neighbour is stating a boundary, *and every observed instance of an inter-set relation takes that form*.
-> The second half was false when written: the work-types charter's *Attachment* and the traits charter's *Binding* already measured one set against another's members, and the artifact types no work-type produces were already a recorded gap (`0079`).
+> **Correction.** This entry previously said: *Relations to other sets belong here. A set defining itself against a neighbour is stating a boundary, and every observed instance of an inter-set relation takes that form.*
+> The last clause was arguably false when written - the axiom charter already had each domain citing the axioms it must satisfy, a one-way citation rather than a boundary - and became plainly false once the work-types charter's *Attachment* and the traits charter's *Binding* measured one set against another's members, and each artifact type's generated *Produced by* section showed the types no work-type produces.
 
 **Two kinds of fault, and only one belongs in a charter.**\
 A **population fault** is visible only across the set - a member admitted for importance rather than fit, two members restating one rule, a population that has stopped being searched.\
