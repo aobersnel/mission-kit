@@ -153,9 +153,10 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0109 | 2026-10-26 | `E4` no longer says every relation between sets is a boundary: a set can exist to cover another's members, declared on the members of the side whose meaning includes it with the reverse view generated, and the false sentence is kept under a correction banner. | general | director | superseded by 0112 | - | `entities/E4-charter.md` | pending |
 | 0110 | 2026-10-26 | `M12` reads a covering scope: the other set's members are the cells, a covering member may sit in several, an uncovered member is a gap for the set whose purpose includes the relation, a member covering nothing is a finding, and each gap names the set it is about. | general | director | superseded by 0113 | - | `methods/M12-investigate-a-set.md` | pending |
 | 0111 | 2026-10-26 | `E8` adds that a party's own report of its conduct settles what it reported, and settles the conduct only where the judge can re-run the work or check it against a record the party could not have written; a judge who can do neither says so. | general | director | superseded by 0114 | - | `entities/E8-evidence.md` | pending |
-| 0112 | 2026-10-26 | `E4` no longer says every relation between sets is a boundary: a set can be measured against another's members, declared on the members of the side whose meaning includes it with the reverse view generated, and a charter that measures its set so says it in its vision or scope; the false sentence is kept under a correction banner. | general | director | proposed | supersedes 0109 | `entities/E4-charter.md` | pending |
-| 0113 | 2026-10-26 | `M12` reads a charter's measure against another set's population as a cover: that population's members are the cells, a member may sit in several, an uncovered member is a gap or, where the charter requires its own members to be covered, a fault of its own set, a member covering nothing is a finding, and each gap names the set it is about. | general | director | proposed | supersedes 0110 | `methods/M12-investigate-a-set.md` | pending |
-| 0114 | 2026-10-26 | `E8` adds that a party's own account of what it did shows what it reported, and shows the thing was done only where the judge can observe the result, re-run the work or check it against a record the party could not have written; a judge who can do none records the claim as not shown. | general | director | proposed | supersedes 0111 | `entities/E8-evidence.md` | pending |
+| 0112 | 2026-10-26 | `E4` no longer says every relation between sets is a boundary: a set can be measured against another's members, declared on the members of the side whose meaning includes it with the reverse view generated, and a charter that measures its set so says it in its vision or scope; the false sentence is kept under a correction banner. | general | director | ratified | supersedes 0109 | `entities/E4-charter.md` | yes |
+| 0113 | 2026-10-26 | `M12` reads a charter's measure against another set's population as a cover: that population's members are the cells, a member may sit in several, an uncovered member is a gap or, where the charter requires its own members to be covered, a fault of its own set, a member covering nothing is a finding, and each gap names the set it is about. | general | director | ratified | supersedes 0110 | `methods/M12-investigate-a-set.md` | yes |
+| 0114 | 2026-10-26 | `E8` adds that a party's own account of what it did shows what it reported, and shows the thing was done only where the judge can observe the result, re-run the work or check it against a record the party could not have written; a judge who can do none records the claim as not shown. | general | director | ratified | supersedes 0111 | `entities/E8-evidence.md` | yes |
+| 0115 | 2026-10-26 | In `E8`'s *The party's own report*, an account the judge cannot check is, at a gate, no valid input: the gate has no verdict and the work waits, as `E7` defines it. | general | director | ratified | amends 0114 | `entities/E8-evidence.md` | yes |
 
 ---
 
@@ -2067,9 +2068,13 @@ A fresh reader's audit of the absorptions and their test (`docs/audits/M7-absorb
 
 ### 0112
 
-**Ruling, proposed.**\
+**Ruling.**\
 `E4`'s paragraph *Relations to other sets belong here* is corrected, under `M13`'s rule for modifying a member: a relation between sets is a boundary only where a set tells itself apart from a neighbour, and a set can also be measured against another's members (`B99`, M7, from pull request 16).\
 It supersedes `0109`, whose wording an audit corrected before any reader ran, and is held on the local branch `m7-absorb` at `546260355d8db6ef1823d79b1a58008efd215172` until ratified.
+
+**Ratified.**\
+The director ratified this ruling on 2026-10-26, choosing option 1 of the list put to the director, which was also the recommendation: all three absorptions ratified, with `E8`'s last clause amended by `0115`.\
+The tested text is the branch `m7-absorb` at `546260355d8db6ef1823d79b1a58008efd215172`; rebased onto `main` before landing, the same entries, identical by `git diff`, landed as `6ceda1347034e1a85d0822af7cf1896f37c94364`.
 
 **Each changed sentence.**
 
@@ -2089,9 +2094,13 @@ The old sentence is false as measured, so this correction goes to the director f
 
 ### 0113
 
-**Ruling, proposed.**\
+**Ruling.**\
 `M12` gains the reading for a charter's measure against another set's population, in steps 2, 3 and 8, under `M13`'s rule for modifying a member (`B100`, M7, from pull request 16, concepts `C1a`, `C1b` and the orphan check of `C1c`).\
 It supersedes `0110`, whose wording and test an audit corrected before any reader ran, and is held on the local branch `m7-absorb` at `546260355d8db6ef1823d79b1a58008efd215172` until its test decides.
+
+**Ratified.**\
+The director ratified this ruling on 2026-10-26, choosing option 1 of the list put to the director, which was also the recommendation: all three absorptions ratified, with `E8`'s last clause amended by `0115`.\
+The tested text is the branch `m7-absorb` at `546260355d8db6ef1823d79b1a58008efd215172`; rebased onto `main` before landing, the same entries, identical by `git diff`, landed as `6ceda1347034e1a85d0822af7cf1896f37c94364`.
 
 **Each changed sentence.**
 
@@ -2173,9 +2182,13 @@ The cost estimate was low: the corpus arms averaged about 780,000 and 680,000 in
 
 ### 0114
 
-**Ruling, proposed.**\
+**Ruling.**\
 `E8` gains a discriminator, *The party's own report*, under `M13`'s rule for modifying a member (`B100`, M7, from pull request 16, concepts `C3a` and `C3e`).\
 It supersedes `0111`, whose wording an audit corrected before any reader ran, and is held on the local branch `m7-absorb` at `546260355d8db6ef1823d79b1a58008efd215172` until decided.
+
+**Ratified.**\
+The director ratified this ruling on 2026-10-26, choosing option 1 of the list put to the director, which was also the recommendation: all three absorptions ratified, with `E8`'s last clause amended by `0115`.\
+The tested text is the branch `m7-absorb` at `546260355d8db6ef1823d79b1a58008efd215172`; rebased onto `main` before landing, the same entries, identical by `git diff`, landed as `6ceda1347034e1a85d0822af7cf1896f37c94364`.
 
 **Each changed sentence.**
 
@@ -2189,3 +2202,23 @@ It supersedes `0111`, whose wording an audit corrected before any reader ran, an
 
 **Source.**\
 `[V, director selection 2026-10-26 ("continue", M7); docs/audits/PR16-absorption-triage.md C3a, C3e; docs/audits/M7-absorb16-audit.md]`
+
+### 0115
+
+**Ruling.**\
+In `E8`'s *The party's own report*, the last clause reads: "a judge who can do none of these records the claim as not shown, and does not pass it - at a gate, such an account is no valid input, so the gate has no verdict and the work waits (`E7`)".
+
+**Why.**\
+Two of twelve readers of `0114`'s text in run `2026-10-26-005243-absorb16` found it unsettled whether an account the judge cannot check gives no verdict or a fail: `E7` makes a fail a valid run that finds the condition false, and no verdict a run that was not validly run, and "does not pass" is neither.\
+The account does not show the condition false, so it is not a fail; it cannot bear on the condition, so it is not valid input, and the gate waits for evidence that can.
+
+**Named costs.**\
+The clause is untested; `Q3`'s rubric already accepted either reading, so it changes no score the test gave.\
+`E7`'s list of what makes a run invalid - evidence for another revision, a judge without authority, a judge who authored the work - does not name this case, so a reader of `E7` alone does not learn it; that is `B105`.
+
+**Alternatives refuted.**\
+A fail - the account does not show the condition false.\
+Leaving it - the open point two readers found would land with the rule.
+
+**Source.**\
+`[V, director ruling 2026-10-26 ("continue 1"); docs/evals/runs/context-lab/2026-10-26-005243-absorb16 cells absorb16.m7-head.c.2 and absorb16.m7-head.c.3 OBSERVATIONS]`

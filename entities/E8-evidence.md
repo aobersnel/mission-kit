@@ -42,7 +42,7 @@ It is evidence, and it never satisfies an independent-agent gate, because the ju
 
 **The party's own report.**\
 A party's own account of what it did - its log, transcript or summary - shows what that party reported.\
-It shows that the thing was done only where the judge can observe the result, re-run the work, or check the account against a record the party could not have written; a judge who can do none of these records the claim as not shown, and does not pass it.
+It shows that the thing was done only where the judge can observe the result, re-run the work, or check the account against a record the party could not have written; a judge who can do none of these records the claim as not shown, and does not pass it - at a gate, such an account is no valid input, so the gate has no verdict and the work waits ([`E7`](E7-gate.md)).
 
 **Measured or inferred.**\
 Evidence carries its provenance: whether it was measured or inferred is part of what is offered, and the standing context forbids presenting one as the other.
