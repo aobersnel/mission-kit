@@ -141,7 +141,8 @@ Every verdict of "already covered" or "absent" below rests on these, run against
 
 Revised after the adversarial review below; where the review changed a verdict or its reason, the table carries the revised one.\
 Tally: 17 concepts - 3 absorbed (`C1c`'s orphan check with `C1b`), 6 already covered, 7 rejected, 1 parked.\
-**Correction.** The commit that landed this triage, `45cb8a1`, says four absorbed and six rejected; the table is right and that message is not.
+**Correction.**\
+The commit that landed this triage, `45cb8a1`, says four absorbed and six rejected; the table is right and that message is not.
 
 | Id | Verdict | Where, or why |
 |---|---|---|
