@@ -40,6 +40,10 @@ The evidence at the repair gate is what its judge examines - the repair, re-chec
 An author may offer evidence about their own work, and must: tests run, checks passed, records kept.\
 It is evidence, and it never satisfies an independent-agent gate, because the judge of that gate must be someone who did not author the work.
 
+**The party's own report.**\
+Evidence produced by the party whose conduct is in question settles what that party reported.\
+It settles the conduct only where the judge can re-run the work, or check the report against a record the party could not have written; a judge who can do neither says so rather than passing it.
+
 **Measured or inferred.**\
 Evidence carries its provenance: whether it was measured or inferred is part of what is offered, and the standing context forbids presenting one as the other.
 

@@ -99,8 +99,13 @@ A charter may use any or all of them, and the strongest charters use all three.
 | **Neighbour table** | how this set is told apart from each adjacent set | one row per neighbour, one discriminating question |
 
 An exclusion without a route is half an answer: it tells the reader where not to put something and leaves them to guess where it belongs.\
-**Relations to other sets belong here.**\
-A set defining itself against a neighbour is stating a boundary, and every observed instance of an inter-set relation takes that form.
+**Relations to other sets belong here when they are boundaries.**\
+A set defining itself against a neighbour is stating a boundary.\
+A set can also exist to cover another set's members - every procedure that conducts work cited by a work-type, every trait named by an axiom - and that relation is not a boundary: it is declared once, on the members of the side whose meaning includes it, with the reverse view generated ([`README.md`](../README.md), *Mechanics*).\
+A charter whose set covers another's says so in its scope; which members are covered is read from the declarations, never kept in the charter.
+
+> **Correction.** This entry previously said that a set defining itself against a neighbour is stating a boundary, *and every observed instance of an inter-set relation takes that form*.
+> The second half was false when written: the work-types charter's *Attachment* and the traits charter's *Binding* already measured one set against another's members, and the artifact types no work-type produces were already a recorded gap (`0079`).
 
 **Two kinds of fault, and only one belongs in a charter.**\
 A **population fault** is visible only across the set - a member admitted for importance rather than fit, two members restating one rule, a population that has stopped being searched.\
