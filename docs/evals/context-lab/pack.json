@@ -103,6 +103,22 @@
       "canaries": [
         "The lantern on pier nine burns green."
       ]
+    },
+    {
+      "id": "corpus-m7-base",
+      "source": "mission-kit",
+      "revision": "5671948ca354e3126f7b052a5c2964195f77c59e",
+      "canaries": [
+        "The lantern on pier nine burns green."
+      ]
+    },
+    {
+      "id": "corpus-m7-head",
+      "source": "mission-kit",
+      "revision": "f137df5043c0d139a0862c28e7ad4a21771e4846",
+      "canaries": [
+        "The lantern on pier nine burns green."
+      ]
     }
   ],
   "arms": [
@@ -379,6 +395,46 @@
           "as": "instruction"
         }
       ]
+    },
+    {
+      "id": "m7-base",
+      "deliver": [
+        {
+          "variant": "corpus-m7-base",
+          "file": "AGENTS.md",
+          "as": "folder-file"
+        },
+        {
+          "variant": "corpus-m7-base",
+          "file": "INDEX.md",
+          "as": "instruction"
+        },
+        {
+          "variant": "corpus-m7-base",
+          "file": ".",
+          "as": "on-request"
+        }
+      ]
+    },
+    {
+      "id": "m7-head",
+      "deliver": [
+        {
+          "variant": "corpus-m7-head",
+          "file": "AGENTS.md",
+          "as": "folder-file"
+        },
+        {
+          "variant": "corpus-m7-head",
+          "file": "INDEX.md",
+          "as": "instruction"
+        },
+        {
+          "variant": "corpus-m7-head",
+          "file": ".",
+          "as": "on-request"
+        }
+      ]
     }
   ],
   "population": [
@@ -513,7 +569,8 @@
     "experiments/adherence-b88.json",
     "experiments/adherence-a4-validate.json",
     "experiments/adherence-a4-replicate.json",
-    "experiments/m2-separation.json"
+    "experiments/m2-separation.json",
+    "experiments/absorb16.json"
   ],
   "suites": [
     {
@@ -716,6 +773,15 @@
       "select": {
         "allTags": [
           "testdrive"
+        ]
+      }
+    },
+    {
+      "id": "absorb16",
+      "experiment": "absorb16",
+      "select": {
+        "allTags": [
+          "absorb16"
         ]
       }
     }

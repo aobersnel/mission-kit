@@ -150,6 +150,9 @@ Whether an entry actually states a ruling is checked by reading, not by script.
 | 0106 | 2026-10-20 | `M2` requires that a probe, a trap included, judge a change only if it separates readers holding the document from readers holding none, checked in an earlier record where one exists and otherwise in the run that judges the change. | general | director | superseded by 0107 | - | `methods/M2-test-drive-docs-by-execution.md` | pending |
 | 0107 | 2026-10-20 | `M2` requires that a probe, a trap included, judge a change only if readers holding either version score differently on it from readers holding nothing, by a margin stated before the run, judged on what readers decide; a probe that does not separate counts for nothing in a change's favour and still counts against it. | general | director | ratified | supersedes 0106 | `methods/M2-test-drive-docs-by-execution.md` | yes |
 | 0108 | 2026-10-26 | `M2` rule 4 reads "readers holding either version, or both", so that one version differing from readers holding nothing is enough for a probe to separate. | general | director | ratified | amends 0107 | `methods/M2-test-drive-docs-by-execution.md` | yes |
+| 0109 | 2026-10-26 | `E4` no longer says every relation between sets is a boundary: a set can exist to cover another's members, declared on the members of the side whose meaning includes it with the reverse view generated, and the false sentence is kept under a correction banner. | general | director | proposed | - | `entities/E4-charter.md` | pending |
+| 0110 | 2026-10-26 | `M12` reads a covering scope: the other set's members are the cells, a covering member may sit in several, an uncovered member is a gap for the set whose purpose includes the relation, a member covering nothing is a finding, and each gap names the set it is about. | general | director | proposed | - | `methods/M12-investigate-a-set.md` | pending |
+| 0111 | 2026-10-26 | `E8` adds that a party's own report of its conduct settles what it reported, and settles the conduct only where the judge can re-run the work or check it against a record the party could not have written; a judge who can do neither says so. | general | director | proposed | - | `entities/E8-evidence.md` | pending |
 
 ---
 
@@ -1963,3 +1966,89 @@ The clause is untested; it narrows a reading the test already used and changes n
 
 **Source.**\
 `[V, director ruling 2026-10-26 ("continue with option 1"); docs/evals/runs/context-lab/2026-10-20-102650-m2-separation cells testdrive.m2-head.a.2 and testdrive.m2-head.c.3 OBSERVATIONS]`
+
+### 0109
+
+**Ruling, proposed.**\
+`E4`'s paragraph *Relations to other sets belong here* is corrected, under `M13`'s rule for modifying a member: a relation between sets is a boundary only where a set tells itself apart from a neighbour, and a set can also exist to cover another's members (`B99`, M7, from pull request 16).\
+Held on the local branch `m7-absorb` at `f137df5043c0d139a0862c28e7ad4a21771e4846` until ratified.
+
+**Each changed sentence.**
+
+| Sentence | Reason |
+|---|---|
+| *Relations to other sets belong here when they are boundaries.* | The heading claimed every inter-set relation for the charter; only boundaries belong there. |
+| A set defining itself against a neighbour is stating a boundary. | Kept; the half of the old sentence that was true. |
+| A set can also exist to cover another set's members - every procedure that conducts work cited by a work-type, every trait named by an axiom - and that relation is not a boundary: it is declared once, on the members of the side whose meaning includes it, with the reverse view generated (`README.md`, *Mechanics*). | The relation the old sentence denied, with two instances already in charters, and where the corpus already says such relations are held. |
+| A charter whose set covers another's says so in its scope; which members are covered is read from the declarations, never kept in the charter. | Where a coverage scope is stated, and the limit that keeps the charter free of cells (`0065`). |
+| The correction banner. | The old sentence was false when written, and a silently corrected record teaches that corrections do not happen. |
+
+**Decision rule.**\
+The old sentence is false as measured, so this correction goes to the director for ratification whatever the test under `0110` shows; the test's `Q2` is reported as evidence of whether readers took the old sentence at its word.
+
+**Source.**\
+`[V, director selection 2026-10-26 ("continue", M7); docs/audits/PR16-absorption-triage.md C1a; docs/BACKLOG.md B99]`
+
+### 0110
+
+**Ruling, proposed.**\
+`M12` gains the reading for a covering scope in steps 2, 3 and 8, under `M13`'s rule for modifying a member (`B100`, M7, from pull request 16, concepts `C1a`, `C1b` and the orphan check of `C1c`).\
+Held on the local branch `m7-absorb` at `f137df5043c0d139a0862c28e7ad4a21771e4846` until its test decides.
+
+**Each changed sentence.**
+
+| Sentence | Reason |
+|---|---|
+| Step 2: Where the scope is another set's population - a set that exists to cover another's members - the cells are that population's members, and a member here may sit in several without the partition being wrong; read which members it covers from the relation's declarations and their generated view, and where no declaration exists, building the view by hand is itself a finding. | Step 2's misfit test reads a covering member that covers several members as a wrong partition (`A7` binds two traits; `M1` is cited by two work-types); the triage's adversarial review found `M12` cannot run such an investigation as written. |
+| Step 3: Under a covering scope, a member of the other set that nothing here covers is such a gap, for whichever set's purpose includes the relation - the side it is declared on; a member here that covers nothing is outside the scope, or shows a member the other set lacks. | Which set an uncovered member indicts is not fixed - the work-types charter takes it as its own gap, the traits charter as the trait's - so the rule names the side the relation is declared on; the orphan is the case `tools/check-enforcers.sh` already rejects. |
+| Step 8: as a row with a revival trigger, *naming the set it is about* | A coverage investigation finds gaps in two sets, and one backlog holds both. |
+
+**Test, pre-registered before the run.**\
+Experiment `absorb16`, scenario `absorb16`: eight probes written from what the changed entries are for, with a key committed with this row and audited by a fresh reader before any reader runs.\
+`Q1` to `Q3` probe the absorbed concepts: investigating a covering set (`0110`), whether a relation between sets can be other than a boundary (`0109`), and a party's own report (`0111`).\
+`Q4` to `Q7` probe four concepts the triage judged already covered: keeping an id on promotion and stating tiers as kinds, what a stand-in supports, keeping what was found, and where a coverage view is kept.\
+`Q8` guards the partition misfit test, which the proposal deleted and `0110` must not weaken.\
+Arms: `control`, holding nothing; `m7-base`, the corpus at `5671948ca354e3126f7b052a5c2964195f77c59e`; `m7-head`, the corpus at `f137df5043c0d139a0862c28e7ad4a21771e4846`; each corpus with `AGENTS.md` as a folder file, the ledger as an instruction and the rest on request, as adopters receive it.\
+Population `c`, `a`, `f`, `o`, three runs per cell, judges `c`, `a`, `o`, two per outcome; a cell meets a probe when its judges' mean is at least 1.5 of 2; rubrics score what an answer says, not whether it cites the corpus.\
+Verdicts are computed by `docs/evals/context-lab/analysis/absorb16-predicates.mjs`, committed with this row, which refuses a run whose corpora were not the pinned revisions:
+
+- **S - separation, per probe (`M2` rule 4).** A probe separates if either corpus meets it at least 0.3 more often, or 0.3 less often, than `control`.
+- **T - the absorptions.** On the target probes that separate, pooled, `m7-head` against `m7-base`: holds if at least 0.25 higher with two-sided Fisher exact p below 0.05; refuted if not higher; unrunnable if no target probe separates. Each target probe's figures are reported too, since each absorption is ratified on its own.
+- **V - the verdicts of "already covered", per probe, on `m7-base`.** *Covered, measured* if met in at least 9 of 12 cells and separating from `control` by 0.3; *covered by general practice* if met in at least 9 of 12 and not separating - the verdict stands, and is not the corpus's doing; *not covered* if met in fewer than 9 of 12 - the triage's verdict is reopened.
+- **G - guard.** Holds if on no probe of the eight, separating or not, does `m7-head` meet it at least 0.3 less often than `m7-base`, and, if `Q8` separates, `m7-head` falls no more than 0.10 below `m7-base` on it; refuted otherwise.
+
+**Decision rule.**\
+G refuted: the wording of the absorption the fallen probe tests is revised and returns to the director.\
+Otherwise, T holds: `0110` and `0111` go to the director for ratification; T not holding: they go to the director with the numbers.\
+A *not covered* verdict reopens that concept's triage verdict, reported to the director.\
+`0109` goes to the director whatever T shows.
+
+**Expected risks, stated in advance.**\
+Capable readers may answer `Q1`, `Q3`, `Q5` and `Q7` from general practice - traceability, independent verification, the limits of a simulator, a single source of truth - and then those probes do not separate and decide nothing, as in `0107`'s test.\
+Readers of `m7-base` may do worse than readers holding nothing on `Q1` and `Q2`, misled by the misfit test and by `E4`'s false sentence; that would separate the probes downward and is what the correction predicts.\
+On-request delivery tests the corpus as adopters reach it, so a reader that never opens `M12`, `E4` or `E8` scores as if it held nothing; the hydration table reports who opened them.\
+At 12 cells per arm a single probe holds only on a large gap: `m7-base` at 3 of 12 needs `m7-head` at 9 (p 0.039).
+
+**Named costs.** 36 cells, 24 of them reading the corpus on request, at roughly 270,000 input tokens each by the adherence runs' means.
+
+**Source.**\
+`[V, director selection 2026-10-26 ("continue", M7); docs/audits/PR16-absorption-triage.md C1a, C1b, C1c, C1f; docs/BACKLOG.md B100]`
+
+### 0111
+
+**Ruling, proposed.**\
+`E8` gains a discriminator, *The party's own report*, under `M13`'s rule for modifying a member (`B100`, M7, from pull request 16, concepts `C3a` and `C3e`).\
+Held on the local branch `m7-absorb` at `f137df5043c0d139a0862c28e7ad4a21771e4846` until its test decides.
+
+**Each changed sentence.**
+
+| Sentence | Reason |
+|---|---|
+| Evidence produced by the party whose conduct is in question settles what that party reported. | `E8` frames independence by the judge alone; `W8` gates on evidence the verifier did not author, which an executor's own transcript satisfies. |
+| It settles the conduct only where the judge can re-run the work, or check the report against a record the party could not have written; a judge who can do neither says so rather than passing it. | The condition that matters - whether the judge can re-check - which the triage's first wording dropped, and the honest outcome where it cannot (`AGENTS.md` 5.1, `UNRUNNABLE` and `NOT-CLAIMED`). |
+
+**Test.**\
+`Q3` of the experiment pre-registered under `0110`, by its rule.
+
+**Source.**\
+`[V, director selection 2026-10-26 ("continue", M7); docs/audits/PR16-absorption-triage.md C3a, C3e]`

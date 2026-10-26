@@ -1,0 +1,11 @@
+{
+  "experiment": "absorb16",
+  "records": [
+    {
+      "experiment": "absorb16",
+      "hash": "dc65fd63f0271450251a6ce78b0136f29f5a67d2d552f59287fcd37e5fab57da",
+      "recordedAt": "2026-10-26T00:23:21.800Z",
+      "declaredStatus": "exploration"
+    }
+  ]
+}

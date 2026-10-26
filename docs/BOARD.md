@@ -262,7 +262,7 @@ The requester is asked for nothing: mission-kit triages the proposal, has the tr
 | # | Item | Row | Status |
 |---|---|---|---|
 | M7.1 | **Triage the proposal into concepts and have a fresh reader attack the triage** | `B100` | `DONE` - `docs/audits/PR16-absorption-triage.md` |
-| M7.2 | Pre-register and run one `context-lab` test of the absorptions and the verdicts of "already covered" | `B100` | `TODO` |
+| M7.2 | Pre-register and run one `context-lab` test of the absorptions and the verdicts of "already covered" | `B100` | `WIP` |
 | M7.3 | Word and land the absorptions, each by its own ruling, correct `E4`'s claim about inter-set relations, and close the pull request with a note of what was absorbed | `B99`, `B100` | `TODO` |
 
 **Exit criteria.**\
